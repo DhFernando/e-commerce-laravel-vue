@@ -25,12 +25,13 @@ Route::get('/advertisement/{advertisement}/approve', 'AdvertisementsController@a
 Route::get('/advertisement/{advertisement}/edit','AdvertisementsController@edit');
 Route::patch('/advertisements/{advertisement}','AdvertisementsController@update');
 
-Route::get('/user/', 'UserController@index');
 
-//apis links
 Route::get('/getAds','AdvertisementsController@getAds');
 Route::get('/currentReqs','AdvertisementsController@currentReqs');
 Route::get('/reqCount','AdvertisementsController@reqCount');
-Route::get('/user/getUserDetails', 'UserController@getUserDetails');
 
+
+Route::get('/user/', 'UserController@index');
+Route::get('/user/getUserDetails', 'UserController@getUserDetails');
 Route::get('/user/getAllUsers', 'UserController@getAllUsers');
+Route::get('/user/{user}', 'UserController@show');

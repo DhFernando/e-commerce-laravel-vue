@@ -1,9 +1,9 @@
 <template>
     <div class="col-12">
         <div class="row">
-            <button class="btn btn-primary" @click="myposts">my posts</button>
-            <button v-show="user.state == 'Admin' " class="btn btn-primary ml-3" @click="currentReqs">Current Requests <span class="bg-dark p-1 pl-2 pr-2">{{reqCount}}</span></button>
-            <button  class="btn btn-primary ml-3">All Users</button>
+            <button class="btn btn-primary btn-sm" @click="myposts">my posts</button>
+            <button v-show="user.state == 'Admin' " class="btn btn-primary ml-3 btn-sm" @click="currentReqs">Current Requests <span class="bg-warning rounded ml-1 p-0 pl-1 pr-1">{{reqCount}}</span></button>
+            <button  class="btn btn-primary ml-3 btn-sm">All Users</button>
         </div>
         <div class="row mt-5">
             <div class="d-flex justify-content-between">

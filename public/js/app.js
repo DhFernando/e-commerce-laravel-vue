@@ -37361,7 +37361,7 @@ var render = function() {
     _c("div", { staticClass: "row" }, [
       _c(
         "button",
-        { staticClass: "btn btn-primary", on: { click: _vm.myposts } },
+        { staticClass: "btn btn-primary btn-sm", on: { click: _vm.myposts } },
         [_vm._v("my posts")]
       ),
       _vm._v(" "),
@@ -37376,18 +37376,18 @@ var render = function() {
               expression: "user.state == 'Admin' "
             }
           ],
-          staticClass: "btn btn-primary ml-3",
+          staticClass: "btn btn-primary ml-3 btn-sm",
           on: { click: _vm.currentReqs }
         },
         [
           _vm._v("Current Requests "),
-          _c("span", { staticClass: "bg-dark p-1 pl-2 pr-2" }, [
+          _c("span", { staticClass: "bg-warning rounded ml-1 p-0 pl-1 pr-1" }, [
             _vm._v(_vm._s(_vm.reqCount))
           ])
         ]
       ),
       _vm._v(" "),
-      _c("button", { staticClass: "btn btn-primary ml-3" }, [
+      _c("button", { staticClass: "btn btn-primary ml-3 btn-sm" }, [
         _vm._v("All Users")
       ])
     ]),
@@ -37456,7 +37456,11 @@ var render = function() {
           "tbody",
           _vm._l(_vm.users, function(user) {
             return _c("tr", [
-              _c("th", { attrs: { scope: "row" } }, [_vm._v(_vm._s(user.id))]),
+              _c("th", { attrs: { scope: "row" } }, [
+                _c("a", { attrs: { href: "/user/" + user.id } }, [
+                  _vm._v(_vm._s(user.id))
+                ])
+              ]),
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(user.name))]),
               _vm._v(" "),

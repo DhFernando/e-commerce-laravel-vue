@@ -6,6 +6,7 @@ use App\Advertisements;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -63,7 +64,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        $userAds = Advertisements::where('user_id',$user->id)->get();
+//        dd($user->id);
+        return view('User.show',compact('user' , 'userAds'));
     }
 
     /**

@@ -14,7 +14,7 @@
                 </thead>
                 <tbody>
                 <tr v-for="user in users">
-                    <th scope="row">{{ user.id }}</th>
+                    <th scope="row"><a :href="'/user/'+ user.id " >{{ user.id }}</a></th>
                     <td>{{ user.name }}</td>
                     <td>{{user.email}}</td>
                     <td>{{user.state}}</td>

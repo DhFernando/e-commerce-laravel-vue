@@ -12,7 +12,7 @@
                         <div>Your E-mail : {{$user->email}}</div>
                         <p>your account created at {{ $user->created_at }}</p>
                         <p>Total num of Advertisement form you : {{ $user_ads->count() }}</p>
-                        <a class="btn btn-primary btn-lg btn-block text-white btn-sm">Change Account Setting</a>
+                        <a href="/user/{{$user->id}}" class="btn btn-primary btn-lg btn-block text-white btn-sm">Change Account Setting</a>
                     </div>
                     <div class="col-7 ">
                         <div class="row p-2">
