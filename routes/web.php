@@ -35,3 +35,4 @@ Route::get('/user/', 'UserController@index');
 Route::get('/user/getUserDetails', 'UserController@getUserDetails');
 Route::get('/user/getAllUsers', 'UserController@getAllUsers');
 Route::get('/user/{user}', 'UserController@show');
+Route::get('/user/{user}/edit','UserController@edit');

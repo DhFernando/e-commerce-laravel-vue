@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62388f0c-dd90-47cc-9350-4920ec15010d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/views/User/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/User/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/user/userOption.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/user/userOption.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/user/user_index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/user/user_index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/User/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/User/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +168,7 @@
       <workItem from="1577789441342" duration="565000" />
       <workItem from="1577797400957" duration="1829000" />
       <workItem from="1577813200544" duration="8382000" />
-      <workItem from="1577940114260" duration="9666000" />
+      <workItem from="1577940114260" duration="10296000" />
     </task>
     <servers />
   </component>
