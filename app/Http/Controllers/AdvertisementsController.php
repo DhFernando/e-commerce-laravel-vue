@@ -15,9 +15,13 @@ class AdvertisementsController extends Controller
 
 private function requestValidate(){
     return tap(request()->validate([
-        'itemName'=>'required | ',
+        'brand'=>'required',
         'description'=>'required | min:3',
         'price'=>'required',
+        'category'=>'required',
+        'subCategory'=>'required',
+        'location'=>'required',
+        'condition'=>'required',
     ]),function (){
         if(request()->hasFile('image')){
             request()->validate([

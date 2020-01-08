@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdvertisementsTable extends Migration
+class CreateAdSubCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,11 @@ class CreateAdvertisementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('advertisements', function (Blueprint $table) {
+        Schema::create('ad_sub_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('brand');
-            $table->string('price');
-            $table->string('description');
-            $table->string('location');
-            $table->string('category');
+            $table->unsignedBigInteger('ad_categories_id');
             $table->string('subCategory');
-//            $table->string('negotiable');
-            $table->string('condition');
-            $table->boolean('state');
             $table->timestamps();
         });
     }
@@ -36,6 +29,6 @@ class CreateAdvertisementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('advertisements');
+        Schema::dropIfExists('ad_sub_categories');
     }
 }

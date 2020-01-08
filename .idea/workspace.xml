@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62388f0c-dd90-47cc-9350-4920ec15010d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/user/user_show_promt.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/AdCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/AdCategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../database/migrations/2020_01_08_173103_create_ad_categories_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/components/input_field.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/AdvertisementsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/AdvertisementsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2019_12_26_152727_create_advertisements_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2019_12_26_152727_create_advertisements_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/user/userOption.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/user/user_index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/user/user_index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/Advertisements/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/Advertisements/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/Advertisements/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/Advertisements/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/Advertisements/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/Advertisements/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/User/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/User/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/User/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/User/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/User/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/User/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,13 +124,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1VWGZtb7RxpqASJzxulGGFXc0hP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -140,18 +141,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components" />
+      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisements" />
+      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components\user" />
+      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js" />
+      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisments" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components\user" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\User" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisements" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisments" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisements" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components\user" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisments" />
     </key>
   </component>
@@ -206,11 +207,15 @@
       <workItem from="1578233420553" duration="1366000" />
       <workItem from="1578240658896" duration="550000" />
       <workItem from="1578405029269" duration="10088000" />
+      <workItem from="1578494856294" duration="9388000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577374066095">
@@ -233,10 +238,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="177" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1577814186252" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1578405136788">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1578495077287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578405136788" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578495077287" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578406570052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
