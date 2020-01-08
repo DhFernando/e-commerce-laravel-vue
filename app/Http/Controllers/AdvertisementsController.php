@@ -49,21 +49,6 @@ private function requestValidate(){
 
     }
 
-    public function getAds(){
-        return Advertisements::where('user_id',Auth::user()->id)->get() ;
-    }
-
-    public function currentReqs(){
-        if(Gate::allows('isAdmin')){
-            return Advertisements::where('state',0)->get();
-        }
-    }
-
-    public function reqCount(){
-        return Advertisements::where('state',0)->get()->count();
-    }
-
-
     public function store(){
 
         User::find(Auth::user()->id)->advertisements()->create(array_merge(

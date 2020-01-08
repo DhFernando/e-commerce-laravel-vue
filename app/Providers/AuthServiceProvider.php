@@ -29,11 +29,15 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('isAdmin',function($user){
             return $user->state == 'Admin';
         });
-        Gate::define('isJustUser',function($user){
-            return $user->state == 'justUser';
+        Gate::define('isUser',function($user){
+            return $user->state == 'User';
         });
         Gate::define('isOwner',function($user , $advertisement){
             return $user->id == $advertisement->user_id;
+        });
+
+        Gate::define('isOwnerAccount',function($user,$accountOwner){
+            return $user->id == $accountOwner->id;
         });
     }
 }

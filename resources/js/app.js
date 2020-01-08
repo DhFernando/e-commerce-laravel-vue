@@ -19,8 +19,10 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('user_option', require('./components/user/userOption.vue').default);
+
+Vue.component('user_show_promt', require('./components/user/user_show_promt.vue').default);
 Vue.component('user_index', require('./components/user/user_index.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

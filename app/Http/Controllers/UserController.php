@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Advertisements;
 use App\User;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
 {
@@ -15,6 +17,21 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    private function requestValidate(){
+        return tap(request()->validate([
+            'name'=>'required',
+            'email'=>'required'
+        ]),function (){
+            if(request()->hasFile('image')){
+                request()->validate([
+                    'image'=>'file|image|max:5000',
+                ]);
+            }
+        }
+        );
+    }
+
     public function index()
     {
 
@@ -28,11 +45,6 @@ class UserController extends Controller
         }
 
     }
-
-    public function getUserDetails(){
-        return Auth::user();
-    }
-
 
 
     /**
@@ -65,7 +77,6 @@ class UserController extends Controller
     public function show(User $user)
     {
         $userAds = Advertisements::where('user_id',$user->id)->get();
-//        dd($user->id);
         return view('User.show',compact('user' , 'userAds'));
     }
 
@@ -73,11 +84,15 @@ class UserController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit(User $user)
     {
-        //
+        if(Gate::allows('isOwnerAccount',$user)){
+            return view('User.edit',compact('user'));
+        }else{
+            return $user->name.' you do not have access to this';
+        }
     }
 
     /**
@@ -89,7 +104,8 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user->update($this->requestValidate());
+        return redirect("/user/".$user->id);
     }
 
     /**
@@ -105,5 +121,13 @@ class UserController extends Controller
 
     public function getAllUsers(){
         return User::all();
+    }
+
+    public function s_user(User $user){
+
+        return [
+                'user'=>$user,
+                'userAd'=>$user->advertisements()->get()
+        ];
     }
 }

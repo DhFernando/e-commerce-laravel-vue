@@ -26,13 +26,10 @@ Route::get('/advertisement/{advertisement}/edit','AdvertisementsController@edit'
 Route::patch('/advertisements/{advertisement}','AdvertisementsController@update');
 
 
-Route::get('/getAds','AdvertisementsController@getAds');
-Route::get('/currentReqs','AdvertisementsController@currentReqs');
-Route::get('/reqCount','AdvertisementsController@reqCount');
-
-
 Route::get('/user/', 'UserController@index');
 Route::get('/user/getUserDetails', 'UserController@getUserDetails');
 Route::get('/user/getAllUsers', 'UserController@getAllUsers');
 Route::get('/user/{user}', 'UserController@show');
+Route::get('/user/{user}/s_user', 'UserController@s_user');
 Route::get('/user/{user}/edit','UserController@edit');
+Route::patch('/user/{user}','UserController@update');

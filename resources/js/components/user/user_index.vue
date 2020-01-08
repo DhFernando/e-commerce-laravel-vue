@@ -14,7 +14,7 @@
                 </thead>
                 <tbody>
                 <tr v-for="user in users">
-                    <th scope="row"><a :href="'/user/'+ user.id " >{{ user.id }}</a></th>
+                    <th scope="row" v-on:click="getUser(user.id)" class="text-primary" data-toggle="modal" data-target="#exampleModal" >{{ user.id }}</th>
                     <td>{{ user.name }}</td>
                     <td>{{user.email}}</td>
                     <td>{{user.state}}</td>
@@ -23,12 +23,17 @@
                 </tr>
                 </tbody>
             </table>
+            <user_show_promt :s_user='s_user' ></user_show_promt>
         </div>
     </div>
 </template>
 
 <script>
+    import user_show_promt from "./user_show_promt"
     export default {
+        components:{
+            user_show_promt
+        },
         mounted() {
             axios.get('/user/getAllUsers',{}).then(response=>{
                 this.users =  response.data
@@ -36,15 +41,20 @@
         },
         data:function(){
             return{
-              users: null
+                users: null,
+                s_user: {
+                    user:null,
+                    userAd: null
+                }
             }
         },
         methods:{
-            // ads(){
-            //     axios.get('/getAd').then(response=>{
-            //         return response.data
-            //     })
-            // }
+            getUser(id){
+                axios.get("/user/"+id+"/s_user",{}).then(response=>{
+                    this.s_user.user =  response.data.user
+                    this.s_user.userAd = response.data.userAd
+                })
+            }
         }
 
     }

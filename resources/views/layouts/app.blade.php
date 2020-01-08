@@ -39,7 +39,7 @@
                         <li class="mr-4">
                             <a href="/user">My Account
                                 @can('isAdmin')
-                                    <span class="bg-dark ml-1 p-1 pl-2 pr-2 text-white rounded">{{\Illuminate\Support\Facades\DB::table('advertisements')->where('state',0)->count()}}</span>
+                                   [ {{\Illuminate\Support\Facades\DB::table('advertisements')->where('state',0)->count()}} ]
                                 @endcan
                             </a>
                         </li>

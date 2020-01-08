@@ -10,7 +10,7 @@
                         <h5>Find Everything What You Want @ ....</h5>
                             <span class="float-right ">
                             Showing Results
-                            <span class="text-primary">{{ $ads->count() }}</span>
+                                <span class="text-primary"> [ {{ $ads->count() }} ]</span>
                         </span>
                     </div>
                 </div>
@@ -28,9 +28,11 @@
                        </div>
                     </div>
                 </div>
-{{--                <ad_display></ad_display>--}}
-
             </div>
         </div>
     </div>
+    <script>
+
+    </script>
 @endsection
+
