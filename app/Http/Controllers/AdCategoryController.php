@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AdCategory;
+use App\User;
 use Illuminate\Http\Request;
 
 class AdCategoryController extends Controller
@@ -14,7 +15,7 @@ class AdCategoryController extends Controller
      */
     public function index()
     {
-        //
+       return AdCategory::all();
     }
 
     /**

@@ -16,7 +16,7 @@ class CreateAdSubCategoriesTable extends Migration
         Schema::create('ad_sub_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('ad_categories_id');
+            $table->unsignedBigInteger('ad_category_id');
             $table->string('subCategory');
             $table->timestamps();
         });

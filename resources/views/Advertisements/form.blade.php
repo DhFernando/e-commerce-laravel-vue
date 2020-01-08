@@ -22,10 +22,7 @@
                 <label for="exampleInputEmail1">Price</label>
                 <input type="text" name="price" class="form-control" value="{{ old('price') ?? $advertisement->price }}"  placeholder="Price">
             </div>
-{{--            <div class="form-group">--}}
-{{--                <label for="exampleInputEmail1">Negotiable</label>--}}
-{{--                <input type="text" name="negotiable" class="form-control" value="{{ old('price') ?? $advertisement->price }}"  placeholder="Price">--}}
-{{--            </div>--}}
+
         </div>
     </div>
 </div>

@@ -101,5 +101,9 @@ private function requestValidate(){
         //
     }
 
+//    public function formOption(){
+//        return view('Advertis')
+//    }
+
 
 }
