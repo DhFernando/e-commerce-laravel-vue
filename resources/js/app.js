@@ -23,7 +23,7 @@ window.Vue = require('vue');
 Vue.component('user_show_promt', require('./components/user/user_show_promt.vue').default);
 Vue.component('user_index', require('./components/user/user_index.vue').default);
 Vue.component('input_field', require('./components/input_field.vue').default);
-Vue.component('createform_index', require('./components/createForm/createForm_index.vue').default);
+Vue.component('create_ad_managing_panel', require('./components/user/createAdManagingPanel.vue').default);
 
 
 /**

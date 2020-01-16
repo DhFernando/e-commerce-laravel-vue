@@ -5,8 +5,6 @@
         <div class="row">
             <div class="col-12">
                 <div class="row">
-
-
                     <button type="button" class="btn btn-sm ml-5 btn-primary" data-toggle="modal" data-target="#examp">
                         Edit
                     </button>

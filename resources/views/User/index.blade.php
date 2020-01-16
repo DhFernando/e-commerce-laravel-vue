@@ -24,6 +24,7 @@
                                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">My Advertisements [ {{ $user->advertisements()->get()->count() }} ]</a>
                                                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Current Requests [ {{$request_ads->count()}} ]</a>
                                                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">All Users</a>
+                                                <a class="nav-item nav-link" id="nav-createAdManagePanel-tab" data-toggle="tab" href="#nav-createAdManagePanel" role="tab" aria-controls="nav-createAdManagePanel" aria-selected="false">Create Ad Manage Panel</a>
                                             </div>
                                         </nav>
                                         <div class="tab-content" id="nav-tabContent">
@@ -62,6 +63,11 @@
                                             </div>
                                             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                                 <user_index></user_index>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-createAdManagePanel" role="tabpanel" aria-labelledby="nav-createAdManagePanel-tab">
+                                                <div class="mt-3">
+                                                    <create_ad_managing_panel></create_ad_managing_panel>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
