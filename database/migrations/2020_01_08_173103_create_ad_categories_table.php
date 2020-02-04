@@ -15,7 +15,9 @@ class CreateAdCategoriesTable extends Migration
     {
         Schema::create('ad_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('category');
+            $table->bigIncrements('MC_id');
+            $table->string('type');
+            $table->string('description');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\AdCategory;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdCategoryController extends Controller
 {
@@ -15,7 +16,7 @@ class AdCategoryController extends Controller
      */
     public function index()
     {
-       return AdCategory::all();
+       return AdCategory::where('type','m')->get();
     }
 
     /**
@@ -23,9 +24,11 @@ class AdCategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+//        json_encode(AdCategory::all());
+//        ;
+
     }
 
     /**
@@ -34,11 +37,19 @@ class AdCategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function store(Request $request){
+//        return response()->json($request->MC_id);
 
+//        return  ;
+        return AdCategory::create([
+            'MC_id'=>3,
+            'type'=>'s',
+            'description'=>'$request->newCategoy',
+            'user_id'=>'Auth::user()->id',
+
+        ]);
+
+    }
     /**
      * Display the specified resource.
      *
@@ -82,5 +93,13 @@ class AdCategoryController extends Controller
     public function destroy(AdCategory $adCategory)
     {
         //
+    }
+
+
+    public function findSC(Request $request){
+//        return response()->json($request->MC_id);
+            $vv = $request->MC_id;;
+        return AdCategory::where('MC_id', $vv)->get();
+//        return $request->MC_id;
     }
 }

@@ -1865,20 +1865,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      categories: ['Electronic', 'Lands', 'Foods'],
-      subCategoryElectronic: ['phone', 'handfree', 'speaker'],
-      subCategoryLands: ['Big', 'Small'],
-      selectedCategory: null,
-      v: 8
+      category: null,
+      categories: null,
+      MC_id: null,
+      SCs: null
     };
   },
-  computed: {
-    subCategories: function subCategories() {
-      if (this.selectedCategory == 'Electronic') {
-        return this.subCategoryElectronic;
-      } else if (this.selectedCategory == 'Lands') {
-        return this.subCategoryLands;
-      }
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/AdCategory/', {}).then(function (response) {
+      _this.categories = response.data;
+    });
+  },
+  computed: {},
+  methods: {
+    findSC: function findSC() {
+      var _this2 = this;
+
+      axios.post('/AdCategory/findSC', {
+        MC_id: this.MC_id
+      }).then(function (res) {
+        _this2.SCs = res.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
     }
   }
 });
@@ -1906,20 +1917,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {},
-  mounted: function mounted() {// axios.get('/AdCategory/',{}).then(response=>{
-    //     this.categories =  response.data
-    // })
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/AdCategory/', {}).then(function (response) {
+      _this.categories = response.data;
+    });
   },
   data: function data() {
     return {
-      categories: 'v'
+      newCategory: null,
+      categories: null,
+      MC_id: null,
+      test: null
     };
   },
+  computed: {},
   methods: {
-    v: function v() {
-      alert(this.categories);
+    submit: function submit() {
+      var _this2 = this;
+
+      axios.post('/AdCategory/store', {
+        newCategory: this.newCategory,
+        MC_id: this.MC_id
+      }).then(function (res) {
+        _this2.test = res.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
     }
   }
 });
@@ -37476,46 +37511,49 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.selectedCategory,
-              expression: "selectedCategory"
+              value: _vm.MC_id,
+              expression: "MC_id"
             }
           ],
           staticClass: "form-control",
-          attrs: { name: "category", type: "text" },
           on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.selectedCategory = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.MC_id = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              },
+              _vm.findSC
+            ]
           }
         },
-        _vm._l(_vm.categories, function(category) {
-          return _c("option", [_vm._v(_vm._s(category))])
+        _vm._l(_vm.categories, function(categoryz) {
+          return _c("option", { domProps: { value: categoryz.id } }, [
+            _vm._v(" " + _vm._s(categoryz.description))
+          ])
         }),
         0
       )
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group ml-1 mr-1 flex-fill bd-highlight" }, [
-      _c("label", [_vm._v("sub Category")]),
+      _c("label", [_vm._v("Sub Category")]),
       _vm._v(" "),
       _c(
         "select",
-        {
-          staticClass: "form-control",
-          attrs: { name: "subCategory", type: "text" }
-        },
-        _vm._l(_vm.subCategories, function(subCategory) {
-          return _c("option", [_vm._v(_vm._s(subCategory))])
+        { staticClass: "form-control" },
+        _vm._l(_vm.SCs, function(SC) {
+          return _c("option", { domProps: { value: SC.id } }, [
+            _vm._v(" " + _vm._s(SC.description))
+          ])
         }),
         0
       )
@@ -37574,6 +37612,44 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "col-12" }, [
     _c("div", { staticClass: "form-group" }, [
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.MC_id,
+              expression: "MC_id"
+            }
+          ],
+          staticClass: "form-control",
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.MC_id = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        _vm._l(_vm.categories, function(categoryz) {
+          return _c("option", { domProps: { value: categoryz.id } }, [
+            _vm._v(" " + _vm._s(categoryz.description))
+          ])
+        }),
+        0
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
       _c("label", [_vm._v("Add Category")]),
       _vm._v(" "),
       _c("input", {
@@ -37581,8 +37657,8 @@ var render = function() {
           {
             name: "model",
             rawName: "v-model",
-            value: _vm.categories,
-            expression: "categories"
+            value: _vm.newCategory,
+            expression: "newCategory"
           }
         ],
         staticClass: "form-control",
@@ -37590,13 +37666,13 @@ var render = function() {
           "aria-describedby": "emailHelp",
           placeholder: "Enter Category"
         },
-        domProps: { value: _vm.categories },
+        domProps: { value: _vm.newCategory },
         on: {
           input: function($event) {
             if ($event.target.composing) {
               return
             }
-            _vm.categories = $event.target.value
+            _vm.newCategory = $event.target.value
           }
         }
       })
@@ -37609,12 +37685,14 @@ var render = function() {
         attrs: { type: "submit" },
         on: {
           click: function($event) {
-            return _vm.v()
+            return _vm.submit()
           }
         }
       },
       [_vm._v("Submit")]
-    )
+    ),
+    _vm._v(" "),
+    _vm._v("\n        " + _vm._s(_vm.test) + "\n\n    ")
   ])
 }
 var staticRenderFns = []

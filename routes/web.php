@@ -38,3 +38,5 @@ Route::patch('/user/{user}','UserController@update');
 
 
 Route::get('/AdCategory/','AdCategoryController@index');
+Route::post('/AdCategory/store','AdCategoryController@store');
+Route::post('/AdCategory/findSC','AdCategoryController@findSC');
