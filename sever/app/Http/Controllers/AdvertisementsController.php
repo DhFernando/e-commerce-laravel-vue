@@ -34,7 +34,6 @@ private function requestValidate(){
 
     public function index()
     {
-
         $ads = Advertisements::where('state',1)->get();
         return view('Advertisements.index',compact('ads'));
     }
@@ -68,6 +67,15 @@ private function requestValidate(){
         $ad = Advertisements::find($advertisment);
         return view('Advertisements.show',compact('ad'));
     }
+
+    public function filter($categoryId)
+    {
+        $ads = Advertisements::where('category',$categoryId)->get();
+        return view('Advertisements.index',compact('ads'));
+//        return $ads;
+    }
+
+
 
     public function edit(Advertisements $advertisement)
     {

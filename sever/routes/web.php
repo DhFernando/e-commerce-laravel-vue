@@ -17,9 +17,9 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
-Route::get('/', 'AdvertisementsController@index');
+Route::get('/advertisements/', 'AdvertisementsController@index');
 Route::get('/advertisements/create', 'AdvertisementsController@create');
 Route::post('/advertisements/store', 'AdvertisementsController@store');
 Route::patch('/advertisements/formOption','AdvertisementsController@formOption');
@@ -27,6 +27,8 @@ Route::get('/advertisement/{advertisement}', 'AdvertisementsController@show');
 Route::get('/advertisement/{advertisement}/approve', 'AdvertisementsController@approve');
 Route::get('/advertisement/{advertisement}/edit','AdvertisementsController@edit');
 Route::patch('/advertisements/{advertisement}','AdvertisementsController@update');
+
+Route::get('/advertisements/{categoryId}/filter', 'AdvertisementsController@filter');
 
 
 

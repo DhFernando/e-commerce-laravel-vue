@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AdCategory;
+use App\Advertisements;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,7 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $adCategories = AdCategory::where('user_id',1)->get();
-        return view('Home.index' , compact('adCategories'));
+        $adCategories = AdCategory::where('MC_id','==',0)->get();
+        $allAds = Advertisements::where('state',1)->get();
+        return view('Home.index' , compact('allAds','adCategories'));
     }
 }
