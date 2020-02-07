@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AdCategory;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,6 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $adCategories = AdCategory::where('user_id',1)->get();;
         $this->middleware('auth');
     }
 
@@ -23,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $adCategories = AdCategory::where('user_id',1)->get();
+        return view('Home.index' , compact('adCategories'));
     }
 }

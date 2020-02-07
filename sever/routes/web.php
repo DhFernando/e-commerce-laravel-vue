@@ -17,6 +17,8 @@
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index');
+
 Route::get('/', 'AdvertisementsController@index');
 Route::get('/advertisements/create', 'AdvertisementsController@create');
 Route::post('/advertisements/store', 'AdvertisementsController@store');

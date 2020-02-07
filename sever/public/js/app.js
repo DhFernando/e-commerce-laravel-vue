@@ -1865,14 +1865,51 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {},
   mounted: function mounted() {},
   data: function data() {
     return {
-      newCategory: null,
+      newSubCategory: null,
+      newMainCategory: null,
       tempStoreCategories: null,
-      MC_id: null
+      MC_id: null,
+      categoryType: null,
+      mainCategoryId: null
     };
   },
   computed: {
@@ -1887,12 +1924,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      axios.post('/AdCategory/store', {
-        newCategory: this.newCategory,
-        MC_id: this.MC_id
-      }).then(function (res) {})["catch"](function (error) {
-        console.log(error.response);
-      });
+      if (this.categoryType == 'SubCategory') {
+        axios.post('/AdCategory/store', {
+          newSubCategory: this.newSubCategory,
+          MC_id: this.MC_id,
+          categoryType: this.categoryType
+        }).then(function (res) {})["catch"](function (error) {
+          console.log(error.response);
+        });
+      } else if (this.categoryType == 'Main') {
+        axios.post('/AdCategory/store', {
+          newMainCategory: this.newMainCategory,
+          MC_id: this.MC_id,
+          categoryType: this.categoryType
+        }).then(function (res) {})["catch"](function (error) {
+          console.log(error.response);
+        });
+      }
+    },
+    getMainCategoryId: function getMainCategoryId(id) {
+      this.mainCategoryId = id;
     }
   }
 });
@@ -37510,112 +37561,217 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "col-12" }, [
     _c("div", { staticClass: "form-group" }, [
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.MC_id,
-              expression: "MC_id"
-            }
-          ],
-          staticClass: "form-control",
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.MC_id = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        _vm._l(_vm.categories, function(categoryz) {
-          return categoryz.type == "Main"
-            ? _c("option", { domProps: { value: categoryz.id } }, [
-                _vm._v(" " + _vm._s(categoryz.description))
-              ])
-            : _vm._e()
-        }),
-        0
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Add Category")]),
+      _c("label", [_vm._v("Add Main")]),
       _vm._v(" "),
       _c("input", {
         directives: [
           {
             name: "model",
             rawName: "v-model",
-            value: _vm.newCategory,
-            expression: "newCategory"
+            value: _vm.categoryType,
+            expression: "categoryType"
           }
         ],
-        staticClass: "form-control",
-        attrs: {
-          "aria-describedby": "emailHelp",
-          placeholder: "Enter Category"
-        },
-        domProps: { value: _vm.newCategory },
+        staticClass: "mr-2",
+        attrs: { type: "radio", value: "Main" },
+        domProps: { checked: _vm._q(_vm.categoryType, "Main") },
         on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.newCategory = $event.target.value
+          change: function($event) {
+            _vm.categoryType = "Main"
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("label", [_vm._v("Add Sub Category")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.categoryType,
+            expression: "categoryType"
+          }
+        ],
+        attrs: { type: "radio", value: "SubCategory" },
+        domProps: { checked: _vm._q(_vm.categoryType, "SubCategory") },
+        on: {
+          change: function($event) {
+            _vm.categoryType = "SubCategory"
           }
         }
       })
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.MC_id,
-              expression: "MC_id"
-            }
-          ],
-          staticClass: "form-control",
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.MC_id = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        _vm._l(_vm.categories, function(categoryz) {
-          return categoryz.type == "subcategory"
-            ? _c("option", { domProps: { value: categoryz.id } }, [
-                _vm._v(" " + _vm._s(categoryz.description))
-              ])
-            : _vm._e()
-        }),
-        0
-      )
+    _vm.categoryType == "SubCategory"
+      ? _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Enter Sub Category")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.MC_id,
+                      expression: "MC_id"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.MC_id = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
+                    }
+                  }
+                },
+                _vm._l(_vm.categories, function(category) {
+                  return category.type == "Main"
+                    ? _c("option", { domProps: { value: category.id } }, [
+                        _vm._v(" " + _vm._s(category.description))
+                      ])
+                    : _vm._e()
+                }),
+                0
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Enter Sub Category")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.newSubCategory,
+                    expression: "newSubCategory"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  "aria-describedby": "emailHelp",
+                  placeholder: "Enter Sub Category"
+                },
+                domProps: { value: _vm.newSubCategory },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.newSubCategory = $event.target.value
+                  }
+                }
+              })
+            ])
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.categoryType == "Main"
+      ? _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Enter Main Category")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.newMainCategory,
+                    expression: "newMainCategory"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  "aria-describedby": "emailHelp",
+                  placeholder: "Enter Main Category"
+                },
+                domProps: { value: _vm.newMainCategory },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.newMainCategory = $event.target.value
+                  }
+                }
+              })
+            ])
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-4" }, [
+        _c(
+          "ol",
+          _vm._l(_vm.categories, function(category) {
+            return category.type == "Main"
+              ? _c(
+                  "li",
+                  {
+                    on: {
+                      click: function($event) {
+                        return _vm.getMainCategoryId(category.id)
+                      }
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(category.description) +
+                        " "
+                    ),
+                    _c(
+                      "span",
+                      { staticClass: "badge badge-danger badge-pill" },
+                      [_vm._v(" - ")]
+                    )
+                  ]
+                )
+              : _vm._e()
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-8" }, [
+        _c(
+          "ol",
+          { staticClass: "d-flex flex-wrap " },
+          _vm._l(_vm.categories, function(category) {
+            return category.MC_id == _vm.mainCategoryId
+              ? _c("li", { staticClass: "mr-5" }, [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(category.description) +
+                      " "
+                  ),
+                  _c("span", { staticClass: "badge badge-danger badge-pill" }, [
+                    _vm._v(" - ")
+                  ])
+                ])
+              : _vm._e()
+          }),
+          0
+        )
+      ])
     ]),
     _vm._v(" "),
     _c(

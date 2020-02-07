@@ -21,7 +21,7 @@
 </head>
 <body class="">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark text-white bg-dark  fixed-top shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     E-Commerce Laravel
@@ -32,12 +32,12 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav ml-5">
-                        <li class="mr-4"><a href="/advertisements/create">Create Ad</a></li>
-                        <li class="mr-4"><a href="#">About Us</a></li>
-                        <li class="mr-4"><a href="#">Contact Us</a></li>
+                    <ul class="navbar-nav  ml-5">
+                        <li class="mr-4"><a href="/advertisements/create" class="text-dark p-2 rounded bg-warning"><strong>Create Ad</strong></a></li>
+                        <li class="mr-4"><a href="#" class="text-light">About Us</a></li>
+                        <li class="mr-4"><a href="#" class="text-light">Contact Us</a></li>
                         <li class="mr-4">
-                            <a href="/user">My Account
+                            <a href="/user" class="text-light">My Account
                                 @can('isAdmin')
                                    [ {{\Illuminate\Support\Facades\DB::table('advertisements')->where('state',0)->count()}} ]
                                 @endcan
@@ -85,8 +85,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
+        <main class="py-4 mt-5">
+          <div class="mt-3">
+              @yield('content')
+          </div>
         </main>
     </div>
 

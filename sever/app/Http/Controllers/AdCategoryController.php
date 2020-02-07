@@ -38,12 +38,21 @@ class AdCategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
-        return AdCategory::create([
-            'MC_id'=>$request->MC_id,
-            'type'=>'subcategory',
-            'description'=>$request->newCategory,
-            'user_id'=>1
-        ]);
+       if($request->categoryType == 'Main') {
+            return AdCategory::create([
+                'MC_id'=>0,
+                'type'=>$request->categoryType,
+                'description'=>$request->newMainCategory,
+                'user_id'=>Auth::user()->id
+            ]);
+        }elseif ($request->categoryType == 'SubCategory'){
+           return AdCategory::create([
+               'MC_id'=>$request->MC_id,
+               'type'=>$request->categoryType,
+               'description'=>$request->newSubCategory,
+               'user_id'=>Auth::user()->id
+           ]);
+       }
 
     }
     /**

@@ -14,9 +14,9 @@
                 <div class="row">
                     <div class="col-12">
                         <form action="/advertisements/store" method="post" enctype="multipart/form-data">
-                            @include('Advertisements.form')
+                            @include('Advertisements.Form.form')
                             @csrf
-                            <button type="submit" class="btn btn-primary">Submit</button>
+
                         </form>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Form Customize</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
