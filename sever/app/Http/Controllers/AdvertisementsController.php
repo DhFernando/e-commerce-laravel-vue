@@ -15,7 +15,7 @@ class AdvertisementsController extends Controller
 
 private function requestValidate(){
     return tap(request()->validate([
-        'brand'=>'required',
+        'main_name'=>'required',
         'description'=>'required | min:3',
         'price'=>'required',
         'category'=>'required',
@@ -65,14 +65,15 @@ private function requestValidate(){
     public function show($advertisment)
     {
         $ad = Advertisements::find($advertisment);
-        return view('Advertisements.show',compact('ad'));
+        $otherAdsFormUser = Advertisements::where('user_id',$ad->user_id)->where('state',1)->get();
+        return view('Advertisements.show',compact('ad', 'otherAdsFormUser'));
+
     }
 
     public function filter($categoryId)
     {
-        $ads = Advertisements::where('category',$categoryId)->get();
+        $ads = Advertisements::where('category',$categoryId)->where('state',1)->get();
         return view('Advertisements.index',compact('ads'));
-//        return $ads;
     }
 
 

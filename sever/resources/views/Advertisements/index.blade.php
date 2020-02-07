@@ -8,21 +8,31 @@
                     <div class="col-12">
                         <h4>Welcome To E-Commerce Laravel</h4>
                         <h5>Find Everything What You Want @ ....</h5>
-                            <span class="float-right ">
+                        <span class="float-left ">
+                            <nav class="navbar navbar-light bg-light justify-content-between">
+                              <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                              </form>
+                            </nav>
+                        </span>
+                        <span class="float-right ">
                             Showing Results
-                                <span class="text-primary"> [ {{ $ads->count() }} ]</span>
+                            <span class="text-primary"> [ {{ $ads->count() }} ]</span>
                         </span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                       <div class="d-flex mt-5 ">
+                <div class="row border rounded">
+
+                    <div class="col-12 ">
+                       <div class="d-flex mt-5 mb-5">
                            @foreach($ads as $ad)
-                               <div class="mr-5">
+                               <div class="mr-5 border rounded p-3">
                                    <a href="/advertisement/{{$ad->id}}"><div style="height: 150px; width: 150px" class="bg-danger"></div></a>
-                                   <div><strong><h4>{{$ad->brand}}</h4></strong></div>
-                                   <div class="text-secondary">{{$ad->description}}</div>
-                                   <div class="text-secondary">Rs {{$ad->price}} /=</div>
+                                   <div class="mt-3">
+                                       <div><strong><h4>{{$ad->main_name}}</h4></strong></div>
+                                       <div class="text-secondary">Rs {{$ad->price}} /=</div>
+                                   </div>
                                </div>
                            @endforeach
                        </div>

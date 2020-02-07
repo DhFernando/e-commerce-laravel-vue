@@ -35,7 +35,7 @@
                                                             @foreach($user->advertisements()->get() as $ad)
                                                                 <div class="mr-5">
                                                                     <a href="/advertisement/{{$ad->id}}"><div style="height: 150px; width: 150px" class="bg-danger"></div></a>
-                                                                    <div><strong><h4>{{$ad->brand}}</h4></strong></div>
+                                                                    <div><strong><h4>{{$ad->main_name}}</h4></strong></div>
                                                                     <div class="text-secondary">{{$ad->description}}</div>
                                                                     <div class="text-secondary">Rs {{$ad->price}} /=</div>
                                                                 </div>
@@ -52,7 +52,7 @@
                                                             @foreach($request_ads as $ad)
                                                                 <div class="mr-5">
                                                                     <a href="/advertisement/{{$ad->id}}"><div style="height: 150px; width: 150px" class="bg-danger"></div></a>
-                                                                    <div><strong><h4>{{$ad->brand}}</h4></strong></div>
+                                                                    <div><strong><h4>{{$ad->main_name}}</h4></strong></div>
                                                                     <div class="text-secondary">{{$ad->description}}</div>
                                                                     <div class="text-secondary">Rs {{$ad->price}} /=</div>
                                                                 </div>
