@@ -23,6 +23,7 @@ class CreateAdvertisementsTable extends Migration
             $table->string('category');
             $table->string('subCategory');
 //            $table->string('negotiable');
+            $table->string('image')->nullable();
             $table->string('condition');
             $table->boolean('state');
             $table->timestamps();

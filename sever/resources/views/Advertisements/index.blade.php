@@ -10,9 +10,19 @@
                         <h5>Find Everything What You Want @ ....</h5>
                         <span class="float-left ">
                             <nav class="navbar navbar-light bg-light justify-content-between">
-                              <form class="form-inline">
+                              <form class="form-inline" action="/advertisements/NA/filter" method="post">
+                                <select class="form-control mr-sm-2" name="subCategoryId">
+                                  @foreach($subCategories as $subCategory)
+                                    <option value="{{$subCategory->id}}" >{{ $subCategory->description }}</option>
+                                  @endforeach
+                                </select>
+                                <select class="form-control mr-sm-2" name="location">
+                                    <option>Colombo</option>
+                                    <option>Gampaha</option>
+                                </select>
+                                  @csrf
                                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                               </form>
                             </nav>
                         </span>
@@ -23,7 +33,6 @@
                     </div>
                 </div>
                 <div class="row border rounded">
-
                     <div class="col-12 ">
                        <div class="d-flex mt-5 mb-5">
                            @foreach($ads as $ad)

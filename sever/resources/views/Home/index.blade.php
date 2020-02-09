@@ -61,7 +61,11 @@
                         <div class="d-flex mt-5 ">
                             @foreach($allAds as $ad)
                                 <div class="mr-5">
-                                    <a href="/advertisement/{{$ad->id}}"><div style="height: 150px; width: 150px" class="bg-danger"></div></a>
+                                    <a href="/advertisement/{{$ad->id}}">
+                                        <div class="">
+                                            <img src="{{ asset('storage/'.$ad->image) }}" style="height: 150px; width: 150px">
+                                        </div>
+                                    </a>
                                     <div><strong><h4>{{$ad->main_name}}</h4></strong></div>
                                     <div class="text-secondary">Rs {{$ad->price}} /=</div>
                                 </div>

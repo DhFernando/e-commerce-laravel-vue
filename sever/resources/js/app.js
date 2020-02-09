@@ -24,6 +24,7 @@ Vue.component('user_show_promt', require('./components/user/user_show_promt.vue'
 Vue.component('user_index', require('./components/user/user_index.vue').default);
 Vue.component('form_input', require('./components/Advertistments/formInput.vue').default);
 Vue.component('form_customize', require('./components/Advertistments/formCustomize.vue').default);
+Vue.component('form_picture_input', require('./components/Advertistments/formPictureInput.vue').default);
 
 
 /**

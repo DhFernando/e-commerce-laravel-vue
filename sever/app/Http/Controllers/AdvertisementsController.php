@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AdCategory;
 use App\Advertisements;
 
 use App\User;
@@ -35,13 +36,13 @@ private function requestValidate(){
     public function index()
     {
         $ads = Advertisements::where('state',1)->get();
+
         return view('Advertisements.index',compact('ads'));
     }
 
 
     public function create()
     {
-
         if(Auth::check()){
             $user = Auth::user();
             $advertisement = new Advertisements();
@@ -54,12 +55,23 @@ private function requestValidate(){
 
     public function store(){
 
-        User::find(Auth::user()->id)->advertisements()->create(array_merge(
+        $Ad = User::find(Auth::user()->id)->advertisements()->create(array_merge(
             $this->requestValidate(),
             ['state'=>0]
         ));
 
+        $this->storeImage($Ad);
+
         return redirect('/');
+    }
+
+    public function storeImage($Ad){
+        if(request()->has('image')){
+            $Ad->update([
+                'image'=>request()->image->store('uploads','public')
+
+            ]);
+        }
     }
 
     public function show($advertisment)
@@ -72,8 +84,19 @@ private function requestValidate(){
 
     public function filter($categoryId)
     {
-        $ads = Advertisements::where('category',$categoryId)->where('state',1)->get();
-        return view('Advertisements.index',compact('ads'));
+        if($categoryId == 'NA'){
+            $ads = Advertisements::where('subCategory',request()->subCategoryId)->where('state',1)->get();
+            $mainCategory = AdCategory::where('id',request()->subCategoryId)->first();
+            $subCategories = AdCategory::where('MC_id',$mainCategory->id)->get();
+
+            return view('Advertisements.index',compact('ads','subCategories','mainCategory'));
+
+        }else{
+            $ads = Advertisements::where('category',$categoryId)->where('state',1)->get();
+            $subCategories = AdCategory::where('MC_id',$categoryId)->get();
+            $mainCategory = AdCategory::where('id',$categoryId)->get();
+            return view('Advertisements.index',compact('ads','subCategories','mainCategory'));
+        }
     }
 
 

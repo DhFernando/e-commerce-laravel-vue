@@ -7,7 +7,9 @@
 
             </div>
             <div class="col-6">
-                <div style="height: 250px; width: 250px" class="bg-danger"></div>
+                <div  class="">
+                    <img src="{{ asset('storage/'.$ad->image) }}" style=" width: 350px">
+                </div>
                 <div>
                     <strong><h4>{{$ad->itemName}}</h4></strong>
                     <a href="/advertisement/{{$ad->id}}/approve">
@@ -47,7 +49,11 @@
                     <div class="d-flex flex-wrap mt-4 ">
                         @foreach($otherAdsFormUser as $ad)
                             <div class="mr-5">
-                                <a href="/advertisement/{{$ad->id}}"><div style="height: 150px; width: 150px" class="bg-danger"></div></a>
+                                <a href="/advertisement/{{$ad->id}}">
+                                    <div class="">
+                                        <img src="{{ asset('storage/'.$ad->image) }}" style="height: 150px; width: 150px">
+                                    </div>
+                                </a>
                                 <div><strong><h4>{{$ad->main_name}}</h4></strong></div>
                                 <div class="text-secondary">{{$ad->description}}</div>
                                 <div class="text-secondary">Rs {{$ad->price}} /=</div>

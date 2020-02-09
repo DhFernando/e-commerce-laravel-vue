@@ -2020,6 +2020,59 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Advertistments/formPictureInput.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Advertistments/formPictureInput.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      imagePreview: '/images/Placeholder.jpg'
+    };
+  },
+  methods: {
+    openUpload: function openUpload() {
+      document.getElementById('file-field').click();
+    },
+    updatePreview: function updatePreview(e) {
+      var _this = this;
+
+      var reader,
+          files = e.target.files;
+
+      if (files.length === 0) {
+        console.log('empty');
+      }
+
+      reader = new FileReader();
+
+      reader.onload = function (e) {
+        _this.imagePreview = e.target.result;
+      };
+
+      reader.readAsDataURL(files[0]);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/user/user_index.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/user/user_index.vue?vue&type=script&lang=js& ***!
@@ -37918,6 +37971,47 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Advertistments/formPictureInput.vue?vue&type=template&id=8b259b36&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Advertistments/formPictureInput.vue?vue&type=template&id=8b259b36& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-6" }, [
+      _c("img", {
+        staticClass: "preview-image border",
+        staticStyle: { width: "200px" },
+        attrs: { src: _vm.imagePreview, alt: "" },
+        on: { click: _vm.openUpload }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        staticStyle: { display: "none" },
+        attrs: { type: "file", name: "image", id: "file-field" },
+        on: { change: _vm.updatePreview }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-6" })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/user/user_index.vue?vue&type=template&id=b8a080b2&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/user/user_index.vue?vue&type=template&id=b8a080b2& ***!
@@ -50367,6 +50461,7 @@ Vue.component('user_show_promt', __webpack_require__(/*! ./components/user/user_
 Vue.component('user_index', __webpack_require__(/*! ./components/user/user_index.vue */ "./resources/js/components/user/user_index.vue")["default"]);
 Vue.component('form_input', __webpack_require__(/*! ./components/Advertistments/formInput.vue */ "./resources/js/components/Advertistments/formInput.vue")["default"]);
 Vue.component('form_customize', __webpack_require__(/*! ./components/Advertistments/formCustomize.vue */ "./resources/js/components/Advertistments/formCustomize.vue")["default"]);
+Vue.component('form_picture_input', __webpack_require__(/*! ./components/Advertistments/formPictureInput.vue */ "./resources/js/components/Advertistments/formPictureInput.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50562,6 +50657,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Advertistments/formPictureInput.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Advertistments/formPictureInput.vue ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _formPictureInput_vue_vue_type_template_id_8b259b36___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formPictureInput.vue?vue&type=template&id=8b259b36& */ "./resources/js/components/Advertistments/formPictureInput.vue?vue&type=template&id=8b259b36&");
+/* harmony import */ var _formPictureInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./formPictureInput.vue?vue&type=script&lang=js& */ "./resources/js/components/Advertistments/formPictureInput.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _formPictureInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _formPictureInput_vue_vue_type_template_id_8b259b36___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _formPictureInput_vue_vue_type_template_id_8b259b36___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Advertistments/formPictureInput.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Advertistments/formPictureInput.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/Advertistments/formPictureInput.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_formPictureInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./formPictureInput.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Advertistments/formPictureInput.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_formPictureInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Advertistments/formPictureInput.vue?vue&type=template&id=8b259b36&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/Advertistments/formPictureInput.vue?vue&type=template&id=8b259b36& ***!
+  \****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_formPictureInput_vue_vue_type_template_id_8b259b36___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./formPictureInput.vue?vue&type=template&id=8b259b36& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Advertistments/formPictureInput.vue?vue&type=template&id=8b259b36&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_formPictureInput_vue_vue_type_template_id_8b259b36___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_formPictureInput_vue_vue_type_template_id_8b259b36___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/user/user_index.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/components/user/user_index.vue ***!
@@ -50718,8 +50882,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\e-commerce-laravel\sever\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\e-commerce-laravel\sever\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

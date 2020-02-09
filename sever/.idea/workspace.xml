@@ -123,23 +123,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/js/components/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/js/components/Advertistments" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Advertisements" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\Advertistments" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Advertisements\Form" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\sever\resources\views\Advertisements\Form" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\sever\resources\js\components\Advertistments" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components\user" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisements" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\Advertistments" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components\user" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\User" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisements" />
       <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisments" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.userOption.vue">
@@ -228,6 +228,18 @@
       <workItem from="1581083374737" duration="1442000" />
       <workItem from="1581090585039" duration="1951000" />
       <workItem from="1581092639854" duration="1728000" />
+      <workItem from="1581094578685" duration="1428000" />
+      <workItem from="1581096431306" duration="1791000" />
+      <workItem from="1581098247022" duration="1788000" />
+      <workItem from="1581100057641" duration="1094000" />
+      <workItem from="1581158143572" duration="327000" />
+      <workItem from="1581232167811" duration="873000" />
+      <workItem from="1581235603673" duration="1050000" />
+      <workItem from="1581237718483" duration="1783000" />
+      <workItem from="1581239538699" duration="1774000" />
+      <workItem from="1581241351671" duration="1773000" />
+      <workItem from="1581243166861" duration="1240000" />
+      <workItem from="1581245067803" duration="1929000" />
     </task>
     <servers />
   </component>
@@ -266,10 +278,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="73" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579240281220" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1581092803265">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1581245068285">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581092803265" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581245068285" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578406570052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

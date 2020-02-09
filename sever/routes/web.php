@@ -28,7 +28,12 @@ Route::get('/advertisement/{advertisement}/approve', 'AdvertisementsController@a
 Route::get('/advertisement/{advertisement}/edit','AdvertisementsController@edit');
 Route::patch('/advertisements/{advertisement}','AdvertisementsController@update');
 
+
+//filter by main home page links
 Route::get('/advertisements/{categoryId}/filter', 'AdvertisementsController@filter');
+
+// post method say search bar filter
+Route::post('/advertisements/{categoryId}/filter', 'AdvertisementsController@filter');
 
 
 
