@@ -43,4 +43,8 @@ class User extends Authenticatable
     public function adCategory(){
         return $this->hasMany(AdCategory::class);
     }
+
+    public function permission(){
+        return $this->hasMany(Permission::class);
+    }
 }

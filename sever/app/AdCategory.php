@@ -13,4 +13,6 @@ class AdCategory extends Model
     public function Advertisements(){
         return $this->hasMany(Advertisements::class);
     }
+
+
 }

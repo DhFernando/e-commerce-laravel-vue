@@ -263,7 +263,9 @@
       <workItem from="1584432996882" duration="1884000" />
       <workItem from="1584434910468" duration="2328000" />
       <workItem from="1584438402672" duration="1785000" />
-      <workItem from="1584440329563" duration="573000" />
+      <workItem from="1584440329563" duration="2464000" />
+      <workItem from="1584442907899" duration="1853000" />
+      <workItem from="1584445238750" duration="706000" />
     </task>
     <servers />
   </component>
@@ -306,10 +308,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="73" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579240281220" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1584440330206">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1584445247239">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584440330206" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584445247239" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578406570052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
