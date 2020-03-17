@@ -2,13 +2,13 @@
     <div class="col-12 m-0 p-0 d-flex bd-highlight">
         <div class="form-group mr-1 flex-fill bd-highlight">
             <label >Category</label>
-            <select class="form-control" v-model="MC_id" name="category"  @change="findSC">
+            <select class="form-control" v-model="MC_id" name="MainCategory_id"  @change="findSC">
                 <option  v-for="categoryz in categories" v-bind:value=" categoryz.id" v-if="categoryz.type == 'Main'"> {{ categoryz.description }}</option>
             </select>
         </div>
         <div class="form-group ml-1 mr-1 flex-fill bd-highlight">
             <label >Sub Category</label>
-            <select class="form-control"  name="subCategory">
+            <select class="form-control"  name="SubCategory_id">
                 <option  v-for="SC in SCs" v-bind:value="SC.id "> {{ SC.description }}</option>
             </select>
         </div>

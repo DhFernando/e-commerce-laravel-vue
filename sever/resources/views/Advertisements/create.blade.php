@@ -16,7 +16,6 @@
                         <form action="/advertisements/store" method="post" enctype="multipart/form-data">
                             @include('Advertisements.Form.form')
                             @csrf
-
                         </form>
                     </div>
                 </div>

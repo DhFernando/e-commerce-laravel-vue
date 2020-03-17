@@ -20,8 +20,8 @@ class CreateAdvertisementsTable extends Migration
             $table->string('price');
             $table->string('description');
             $table->string('location');
-            $table->string('category');
-            $table->string('subCategory');
+            $table->unsignedBigInteger('SubCategory_id');
+            $table->unsignedBigInteger('MainCategory_id');
 //            $table->string('negotiable');
             $table->string('image')->nullable();
             $table->string('condition');

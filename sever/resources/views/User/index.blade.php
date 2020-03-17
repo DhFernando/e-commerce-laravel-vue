@@ -5,7 +5,7 @@
         <div class="row ">
             <div class="col-12">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4 example z-depth-3 pb-4">
                         <div class="bg-danger m-5 rounded-circle border border-dark" style="height: 200px;" ></div>
                         <div>Name : {{$user->name}}</div>
                         <div>Your Id : {{$user->id}}</div>

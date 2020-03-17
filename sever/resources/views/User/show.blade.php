@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 ">
                 <div class="bg-danger m-5 rounded-circle border border-dark" style="height: 200px;" ></div>
                 <div>Name : {{$user->name}}</div>
                 <div>Your Id : {{$user->id}}</div>

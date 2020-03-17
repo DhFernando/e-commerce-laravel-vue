@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 
 Vue.component('user_show_promt', require('./components/user/user_show_promt.vue').default);
+Vue.component('user_permission_promt', require('./components/user/user_permission_promt.vue').default);
 Vue.component('user_index', require('./components/user/user_index.vue').default);
 Vue.component('form_input', require('./components/Advertistments/formInput.vue').default);
 Vue.component('form_customize', require('./components/Advertistments/formCustomize.vue').default);

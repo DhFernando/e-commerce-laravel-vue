@@ -36,6 +36,11 @@
                                        </tr>
                                    </tbody>
                                </table>
+
+                        <!--     -->
+                               <user_permission_promt></user_permission_promt>
+                        <!--     -->
+
                            </div>
                            <div class="col-5">
                                <div class="bg-danger " style="height: 150px;" ></div>
@@ -43,12 +48,17 @@
                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Set Permission</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+                            Set Permission
+                        </button>
+
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
 </template>
 

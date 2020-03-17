@@ -11,6 +11,9 @@ class Advertisements extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+    public function AdCategory(){
+        return $this->belongsTo(AdCategory::class);
+    }
 
     public function scopeGetAds($query){
 

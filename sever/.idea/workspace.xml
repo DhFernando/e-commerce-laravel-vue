@@ -123,23 +123,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/js/components/Advertistments" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/js/components/user" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\js" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\css" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Advertisements" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\Advertistments" />
-      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Advertisements\Form" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\sever\resources\views\Advertisements\Form" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\user" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images\home\slides" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Home" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\Advertistments" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components\user" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\User" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\views\Advertisements" />
-      <recent name="C:\xampp\htdocs\e-commerce-laravel\resources\js\components" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.userOption.vue">
@@ -240,6 +240,30 @@
       <workItem from="1581241351671" duration="1773000" />
       <workItem from="1581243166861" duration="1240000" />
       <workItem from="1581245067803" duration="1929000" />
+      <workItem from="1581247287174" duration="1806000" />
+      <workItem from="1581249124563" duration="912000" />
+      <workItem from="1581251713039" duration="1781000" />
+      <workItem from="1581253525315" duration="1787000" />
+      <workItem from="1581255496649" duration="1762000" />
+      <workItem from="1581257480689" duration="1804000" />
+      <workItem from="1581259320393" duration="937000" />
+      <workItem from="1581263539057" duration="1788000" />
+      <workItem from="1581265349693" duration="858000" />
+      <workItem from="1581419210685" duration="1739000" />
+      <workItem from="1581421054020" duration="1618000" />
+      <workItem from="1581423030398" duration="1566000" />
+      <workItem from="1581425275556" duration="1747000" />
+      <workItem from="1581427087072" duration="1784000" />
+      <workItem from="1581428956433" duration="1475000" />
+      <workItem from="1584380949068" duration="659000" />
+      <workItem from="1584417356977" duration="1734000" />
+      <workItem from="1584419124800" duration="866000" />
+      <workItem from="1584428684502" duration="1738000" />
+      <workItem from="1584430499471" duration="1141000" />
+      <workItem from="1584432996882" duration="1884000" />
+      <workItem from="1584434910468" duration="2328000" />
+      <workItem from="1584438402672" duration="1785000" />
+      <workItem from="1584440329563" duration="573000" />
     </task>
     <servers />
   </component>
@@ -250,6 +274,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="452" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581258648939">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="452" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1581258648939" />
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577374066095">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -278,10 +306,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="73" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579240281220" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1581245068285">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1584440330206">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581245068285" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584440330206" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578406570052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -290,5 +318,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581070444522" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../resources/views/Home/index.blade.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

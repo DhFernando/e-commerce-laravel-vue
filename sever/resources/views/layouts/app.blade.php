@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+{{--  -------------------------------------------------------------------------------------------------  --}}
+    <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
+{{--  -------------------------------------------------------------------------------------------------  --}}
+
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -85,12 +91,16 @@
             </div>
         </nav>
 
-        <main class="py-4 mt-5">
+        <main class="py-4 mt-5 bg-white">
           <div class="mt-3">
               @yield('content')
           </div>
         </main>
     </div>
+
+{{--  ----------------------------------------------------------------  --}}
+    <script src="{{ asset('js/mdb.min.js') }}"></script>
+{{--  ----------------------------------------------------------------  --}}
 
 </body>
 </html>

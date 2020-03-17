@@ -19,8 +19,8 @@ private function requestValidate(){
         'main_name'=>'required',
         'description'=>'required | min:3',
         'price'=>'required',
-        'category'=>'required',
-        'subCategory'=>'required',
+        'SubCategory_id'=>'required',
+        'MainCategory_id'=>'required',
         'location'=>'required',
         'condition'=>'required',
     ]),function (){
@@ -74,11 +74,18 @@ private function requestValidate(){
         }
     }
 
-    public function show($advertisment)
+    public function show($advertisement)
     {
-        $ad = Advertisements::find($advertisment);
+        $ad = Advertisements::find($advertisement);
         $otherAdsFormUser = Advertisements::where('user_id',$ad->user_id)->where('state',1)->get();
-        return view('Advertisements.show',compact('ad', 'otherAdsFormUser'));
+        $subCategory  = AdCategory::where('id',$ad->SubCategory_id)->first();
+        $MC = AdCategory::where('id',$subCategory->MC_id)->first();
+//         $categories = json_encode(array(
+//                    'subCategory'=>AdCategory::where('id',$ad->AdCategory_id)->first(),
+//                    'MC'=>AdCategory::where('id',$subCategory->MC_id)->first()
+//                ));
+
+        return view('Advertisements.show',compact('ad', 'otherAdsFormUser','MC','subCategory'));
 
     }
 
@@ -92,10 +99,10 @@ private function requestValidate(){
             return view('Advertisements.index',compact('ads','subCategories','mainCategory'));
 
         }else{
-            $ads = Advertisements::where('category',$categoryId)->where('state',1)->get();
+
+            $ads =  Advertisements::where('MainCategory_id',$categoryId)->get();
             $subCategories = AdCategory::where('MC_id',$categoryId)->get();
-            $mainCategory = AdCategory::where('id',$categoryId)->get();
-            return view('Advertisements.index',compact('ads','subCategories','mainCategory'));
+            return view('Advertisements.index',compact('ads','subCategories'));
         }
     }
 
@@ -113,7 +120,8 @@ private function requestValidate(){
 
     public function update(Request $request, Advertisements $advertisement)
     {
-        $advertisement->update($this->requestValidate());
+        $Ad = $advertisement->update($this->requestValidate());
+        $this->storeImage($advertisement);
         return redirect('/advertisement/'.$advertisement->id);
     }
 
