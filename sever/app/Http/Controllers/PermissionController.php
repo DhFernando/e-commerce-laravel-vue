@@ -3,81 +3,82 @@
 namespace App\Http\Controllers;
 
 use App\Permission;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PermissionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private function requestValidate(){
+        return tap(request()->validate([
+            'userUpdate'=>'',
+            'userSetPermission'=>'',
+            'userDelete'=>'',
+            'userMakeAdmin'=>'',
+            'userSetBlock'=>'',
+            'advertisementApprove'=>'',
+            'advertisementDelete'=>'',
+        ]),function (){
+            if(request()->hasFile('image')){
+                request()->validate([
+                    'image'=>'file|image|max:5000',
+                ]);
+            }
+        }
+        );
+    }
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Permission $permission)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Permission $permission)
     {
-        //
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Permission $permission)
+
+    public function update(User $user)
     {
-        //
+        $user->permission()->first()->update(array_merge(
+            [
+                'userUpdate'=>'0',
+                'userSetPermission'=>'0',
+                'userDelete'=>'0',
+                'userMakeAdmin'=>'0',
+                'userSetBlock'=>'0',
+                'advertisementApprove'=>'0',
+                'advertisementDelete'=>'0',
+            ],
+            array_merge(
+                $this->requestValidate(),
+                [ 'setupUserId'=>Auth::user()->id ]
+            )
+            )
+        );
+
+        return redirect("/user/");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Permission $permission)
     {
         //

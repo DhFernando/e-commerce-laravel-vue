@@ -38292,7 +38292,7 @@ var render = function() {
                 "form",
                 {
                   attrs: {
-                    action: "/user/" + _vm.user_id + "/permissionUpdate",
+                    action: "/permission/" + _vm.user_id + "/update",
                     method: "get",
                     enctype: "multipart/form-data"
                   }

@@ -13,11 +13,7 @@ use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
 
     private function requestValidate(){
         return tap(request()->validate([
@@ -68,22 +64,12 @@ class UserController extends Controller
     }
 
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //
@@ -93,24 +79,14 @@ class UserController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(User $user)
     {
         $userAds = Advertisements::where('user_id',$user->id)->get();
         return view('User.show',compact('user' , 'userAds'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+
     public function edit(User $user)
     {
         if(Gate::allows('isOwnerAccount',$user)){
@@ -120,25 +96,14 @@ class UserController extends Controller
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, User $user)
     {
         $user->update($this->requestValidate());
         return redirect("/user/".$user->id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(User $user)
     {
         //
@@ -148,7 +113,7 @@ class UserController extends Controller
         return User::all();
     }
 
-    public function s_user(User $user){
+    public function s_user(User $user){  // s_user => selected user
         return [
                 'user'=>$user,
                 'userAd'=>$user->advertisements()->get(),
@@ -156,40 +121,4 @@ class UserController extends Controller
         ];
     }
 
-    public function setPermission($user_id){
-//        dd($user_id);
-        Permission::create(
-            array_merge(
-                    [
-                'userUpdate'=>'0',
-                'userSetPermission'=>'0',
-                'userDelete'=>'0',
-                'userMakeAdmin'=>'0',
-                'userSetBlock'=>'0',
-                'advertisementApprove'=>'0',
-                'advertisementDelete'=>'0',
-            ],array_merge(
-                    $this->permissionValidation(),
-                    [
-                        'user_id'=>$user_id, // the person who have this permission
-                        'setupUserId'=>Auth::user()->id , // the person who set permission
-                    ]
-                )
-            )
-        );
-
-        return redirect("/user/");
-    }
-
-    public function permissionUpdate(User $user){
-        $user->permission()->first()->update(
-            array_merge(
-                $this->permissionValidation(),
-                [ 'setupUserId'=>Auth::user()->id ]
-            )
-        );
-
-        return redirect("/user/");
-
-    }
 }

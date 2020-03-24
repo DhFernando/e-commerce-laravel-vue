@@ -47,8 +47,7 @@ Route::patch('/user/{user}','UserController@update');
 
 // permission on user
 
-Route::get('/user/{user_id}/setPermission','UserController@setPermission');
-Route::get('/user/{user}/permissionUpdate','UserController@permissionUpdate');
+Route::get('/permission/{user}/update','PermissionController@update');
 
 
 Route::get('/AdCategory/','AdCategoryController@index');
