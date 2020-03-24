@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Advertisements;
+use App\Permission;
 use App\User;
 
 use Illuminate\Http\Request;
@@ -31,6 +32,20 @@ class UserController extends Controller
         }
         );
     }
+
+    private function permissionValidation(){
+        return tap(request()->validate([
+            // no need to validate any thing
+        ]),function (){
+            if(request()->hasFile('image')){
+                request()->validate([
+                    'image'=>'file|image|max:5000',
+                ]);
+            }
+        }
+        );
+    }
+
 
     public function index()
     {
@@ -65,6 +80,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        //
+    }
+
+    public function storeUserPermission(){
         //
     }
 
@@ -129,5 +148,19 @@ class UserController extends Controller
                 'user'=>$user,
                 'userAd'=>$user->advertisements()->get()
         ];
+    }
+
+    public function setPermission($user){
+        $permission = request();
+        Permission::create(array_merge(
+           $this->permissionValidation(),
+            [
+                'userId'=>Auth::user()->id,
+                'setupUserId'=>Auth::user()->id ,
+                'userSetBlock'=>Auth::user()->id ,
+            ])
+        );
+
+        return redirect("/user/");
     }
 }

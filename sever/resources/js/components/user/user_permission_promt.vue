@@ -10,68 +10,71 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Advertisement</th>
-                                <th scope="col">User</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>
-                                    <table class="table mt-0">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th scope="col">Update</th>
-                                            <th scope="col">Permission Set </th>
-                                            <th scope="col">Delete</th>
-                                            <th scope="col">Make Admin</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox"  name="vehicle1" value="Bike">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox"  name="vehicle1" value="Bike">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox"  name="vehicle1" value="Bike">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" name="vehicle1" value="Bike">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table class="table mt-0">
-                                        <thead class="thead-dark">
-                                        <tr>
-                                            <th scope="col">Approve</th>
-                                            <th scope="col">Delete</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox"  name="vehicle1" value="Bike">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" name="vehicle1" value="Bike">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <form action="/user/4/setPermission" method="get" enctype="multipart/form-data">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Advertisement</th>
+                                    <th scope="col">User</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <table class="table mt-0">
+                                            <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">Update</th>
+                                                <th scope="col">Permission Set </th>
+                                                <th scope="col">Delete</th>
+                                                <th scope="col">Make Admin</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox"  name="userUpdate" value="1">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox"  name="userSetPermission" value="1">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox"  name="userDelete" value="1">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="userMakeAdmin" value="1">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table mt-0">
+                                            <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">Approve</th>
+                                                <th scope="col">Delete</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox"  name="advertisementApprove" value="1">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="advertisementDelete" value="1">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <button>save</button>
+                            </table>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -88,6 +91,7 @@
         props:[''],
         data:function(){
             return{
+
             }
         },
     }

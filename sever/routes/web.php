@@ -45,6 +45,10 @@ Route::get('/user/{user}/s_user', 'UserController@s_user');
 Route::get('/user/{user}/edit','UserController@edit');
 Route::patch('/user/{user}','UserController@update');
 
+// permission on user
+
+Route::get('/user/{user}/setPermission','UserController@setPermission');
+
 
 Route::get('/AdCategory/','AdCategoryController@index');
 Route::post('/AdCategory/store','AdCategoryController@store');

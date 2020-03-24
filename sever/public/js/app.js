@@ -2242,6 +2242,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [''],
   data: function data() {
@@ -38295,133 +38298,149 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
-                _c("table", { staticClass: "table" }, [
-                  _c("thead", { staticClass: "thead-dark" }, [
-                    _c("tr", [
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [
-                        _vm._v("Advertisement")
+                _c(
+                  "form",
+                  {
+                    attrs: {
+                      action: "/user/4/setPermission",
+                      method: "get",
+                      enctype: "multipart/form-data"
+                    }
+                  },
+                  [
+                    _c("table", { staticClass: "table" }, [
+                      _c("thead", { staticClass: "thead-dark" }, [
+                        _c("tr", [
+                          _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+                          _vm._v(" "),
+                          _c("th", { attrs: { scope: "col" } }, [
+                            _vm._v("Advertisement")
+                          ]),
+                          _vm._v(" "),
+                          _c("th", { attrs: { scope: "col" } }, [
+                            _vm._v("User")
+                          ])
+                        ])
                       ]),
                       _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("User")])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tbody", [
-                    _c("tr", [
-                      _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _c("table", { staticClass: "table mt-0" }, [
-                          _c("thead", { staticClass: "thead-dark" }, [
-                            _c("tr", [
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Update")
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("table", { staticClass: "table mt-0" }, [
+                              _c("thead", { staticClass: "thead-dark" }, [
+                                _c("tr", [
+                                  _c("th", { attrs: { scope: "col" } }, [
+                                    _vm._v("Update")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", { attrs: { scope: "col" } }, [
+                                    _vm._v("Permission Set ")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", { attrs: { scope: "col" } }, [
+                                    _vm._v("Delete")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", { attrs: { scope: "col" } }, [
+                                    _vm._v("Make Admin")
+                                  ])
+                                ])
                               ]),
                               _vm._v(" "),
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Permission Set ")
-                              ]),
-                              _vm._v(" "),
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Delete")
-                              ]),
-                              _vm._v(" "),
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Make Admin")
+                              _c("tbody", [
+                                _c("tr", [
+                                  _c("td", [
+                                    _c("input", {
+                                      attrs: {
+                                        type: "checkbox",
+                                        name: "userUpdate",
+                                        value: "1"
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c("input", {
+                                      attrs: {
+                                        type: "checkbox",
+                                        name: "userSetPermission",
+                                        value: "1"
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c("input", {
+                                      attrs: {
+                                        type: "checkbox",
+                                        name: "userDelete",
+                                        value: "1"
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c("input", {
+                                      attrs: {
+                                        type: "checkbox",
+                                        name: "userMakeAdmin",
+                                        value: "1"
+                                      }
+                                    })
+                                  ])
+                                ])
                               ])
                             ])
                           ]),
                           _vm._v(" "),
-                          _c("tbody", [
-                            _c("tr", [
-                              _c("td", [
-                                _c("input", {
-                                  attrs: {
-                                    type: "checkbox",
-                                    name: "vehicle1",
-                                    value: "Bike"
-                                  }
-                                })
+                          _c("td", [
+                            _c("table", { staticClass: "table mt-0" }, [
+                              _c("thead", { staticClass: "thead-dark" }, [
+                                _c("tr", [
+                                  _c("th", { attrs: { scope: "col" } }, [
+                                    _vm._v("Approve")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", { attrs: { scope: "col" } }, [
+                                    _vm._v("Delete")
+                                  ])
+                                ])
                               ]),
                               _vm._v(" "),
-                              _c("td", [
-                                _c("input", {
-                                  attrs: {
-                                    type: "checkbox",
-                                    name: "vehicle1",
-                                    value: "Bike"
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c("input", {
-                                  attrs: {
-                                    type: "checkbox",
-                                    name: "vehicle1",
-                                    value: "Bike"
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c("input", {
-                                  attrs: {
-                                    type: "checkbox",
-                                    name: "vehicle1",
-                                    value: "Bike"
-                                  }
-                                })
+                              _c("tbody", [
+                                _c("tr", [
+                                  _c("td", [
+                                    _c("input", {
+                                      attrs: {
+                                        type: "checkbox",
+                                        name: "advertisementApprove",
+                                        value: "1"
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c("input", {
+                                      attrs: {
+                                        type: "checkbox",
+                                        name: "advertisementDelete",
+                                        value: "1"
+                                      }
+                                    })
+                                  ])
+                                ])
                               ])
                             ])
                           ])
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("td", [
-                        _c("table", { staticClass: "table mt-0" }, [
-                          _c("thead", { staticClass: "thead-dark" }, [
-                            _c("tr", [
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Approve")
-                              ]),
-                              _vm._v(" "),
-                              _c("th", { attrs: { scope: "col" } }, [
-                                _vm._v("Delete")
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("tbody", [
-                            _c("tr", [
-                              _c("td", [
-                                _c("input", {
-                                  attrs: {
-                                    type: "checkbox",
-                                    name: "vehicle1",
-                                    value: "Bike"
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c("input", {
-                                  attrs: {
-                                    type: "checkbox",
-                                    name: "vehicle1",
-                                    value: "Bike"
-                                  }
-                                })
-                              ])
-                            ])
-                          ])
-                        ])
-                      ])
+                      _c("button", [_vm._v("save")])
                     ])
-                  ])
-                ])
+                  ]
+                )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [

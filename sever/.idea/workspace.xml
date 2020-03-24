@@ -123,22 +123,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/js/components/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/views/User" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\User" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\user" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images\home\slides" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Home" />
+      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\js" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\css" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Advertisements" />
-      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\Advertistments" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\user" />
-      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images\home\slides" />
-      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\views\Home" />
-      <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\public\images" />
       <recent name="G:\languages\web\laraval\practicle\e-commerce-laravel\sever\resources\js\components\Advertistments" />
     </key>
   </component>
@@ -265,7 +265,11 @@
       <workItem from="1584438402672" duration="1785000" />
       <workItem from="1584440329563" duration="2464000" />
       <workItem from="1584442907899" duration="1853000" />
-      <workItem from="1584445238750" duration="706000" />
+      <workItem from="1584445238750" duration="1788000" />
+      <workItem from="1584447053656" duration="71000" />
+      <workItem from="1584983226608" duration="1744000" />
+      <workItem from="1584984996152" duration="1799000" />
+      <workItem from="1584986816941" duration="1810000" />
     </task>
     <servers />
   </component>
@@ -308,10 +312,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="73" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579240281220" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1584445247239">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1584986817118">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584445247239" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584986817118" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578406570052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
