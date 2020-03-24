@@ -10,7 +10,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form :action="'/permission/' + user_id +'/update'" method="get" enctype="multipart/form-data">
+                        <form :action="'/permission/' + s_user.user.id  +'/update'" method="get" enctype="multipart/form-data">
                             <table class="table">
                                 <thead class="thead-dark">
                                 <tr>
@@ -36,19 +36,19 @@
                                             <tbody>
                                             <tr>
                                                 <td>
-                                                    <input type="checkbox"  name="userUpdate" value="1">
+                                                    <input type="checkbox"  name="userUpdate" :checked="s_user.userPermission.userUpdate == 1" value="1">
                                                 </td>
                                                 <td>
-                                                    <input type="checkbox"  name="userSetPermission" value="1">
+                                                    <input type="checkbox"  name="userSetPermission" :checked="s_user.userPermission.userSetPermission == 1" value="1">
                                                 </td>
                                                 <td>
-                                                    <input type="checkbox"  name="userDelete" value="1">
+                                                    <input type="checkbox"  name="userDelete" :checked="s_user.userPermission.userDelete == 1" value="1">
                                                 </td>
                                                 <td>
-                                                    <input type="checkbox" name="userMakeAdmin" value="1">
+                                                    <input type="checkbox" name="userMakeAdmin" :checked="s_user.userPermission.userMakeAdmin == 1" value="1">
                                                 </td>
                                                 <td>
-                                                    <input type="checkbox" name="userSetBlock" value="1">
+                                                    <input type="checkbox" name="userSetBlock" :checked="s_user.userPermission.userSetBlock == 1" value="1">
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -65,10 +65,10 @@
                                             <tbody>
                                             <tr>
                                                 <td>
-                                                    <input type="checkbox"  name="advertisementApprove" value="1">
+                                                    <input type="checkbox"  name="advertisementApprove" :checked="s_user.userPermission.advertisementApprove == 1" value="1">
                                                 </td>
                                                 <td>
-                                                    <input type="checkbox" name="advertisementDelete" value="1">
+                                                    <input type="checkbox" name="advertisementDelete" :checked="s_user.userPermission.advertisementDelete == 1" value="1">
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -77,6 +77,7 @@
                                 </tr>
                                 </tbody>
                                 <button>save</button>
+
                             </table>
                         </form>
                     </div>
@@ -92,7 +93,7 @@
 
 <script>
     export default {
-        props:['user_id'],
+        props:['s_user'],
         data:function(){
             return{
 

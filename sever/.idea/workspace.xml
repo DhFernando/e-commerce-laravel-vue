@@ -279,6 +279,9 @@
       <workItem from="1585056860395" duration="1784000" />
       <workItem from="1585058674204" duration="1790000" />
       <workItem from="1585060667208" duration="960000" />
+      <workItem from="1585064564769" duration="1636000" />
+      <workItem from="1585066375791" duration="1757000" />
+      <workItem from="1585068208085" duration="1067000" />
     </task>
     <servers />
   </component>
@@ -325,18 +328,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="73" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579240281220" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585060668133">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585068207147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585060668133" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585068207147" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578406570052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1578406570052" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581070444522">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585068393128">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581070444522" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585068393128" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

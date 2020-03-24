@@ -38,7 +38,7 @@
                                </table>
 
                         <!--     -->
-                               <user_permission_promt v-bind:user_id="s_user.user.id"></user_permission_promt>
+                               <user_permission_promt v-bind:s_user="s_user"></user_permission_promt>
                         <!--     -->
 
                            </div>

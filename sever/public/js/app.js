@@ -2251,8 +2251,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['user_id'],
+  props: ['s_user'],
   data: function data() {
     return {};
   }
@@ -38292,16 +38293,153 @@ var render = function() {
                 "form",
                 {
                   attrs: {
-                    action: "/permission/" + _vm.user_id + "/update",
+                    action: "/permission/" + _vm.s_user.user.id + "/update",
                     method: "get",
                     enctype: "multipart/form-data"
                   }
                 },
-                [_vm._m(1)]
+                [
+                  _c("table", { staticClass: "table" }, [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("table", { staticClass: "table mt-0" }, [
+                            _vm._m(2),
+                            _vm._v(" "),
+                            _c("tbody", [
+                              _c("tr", [
+                                _c("td", [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "userUpdate",
+                                      value: "1"
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.s_user.userPermission.userUpdate ==
+                                        1
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "userSetPermission",
+                                      value: "1"
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.s_user.userPermission
+                                          .userSetPermission == 1
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "userDelete",
+                                      value: "1"
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.s_user.userPermission.userDelete ==
+                                        1
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "userMakeAdmin",
+                                      value: "1"
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.s_user.userPermission
+                                          .userMakeAdmin == 1
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "userSetBlock",
+                                      value: "1"
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.s_user.userPermission
+                                          .userSetBlock == 1
+                                    }
+                                  })
+                                ])
+                              ])
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("table", { staticClass: "table mt-0" }, [
+                            _vm._m(3),
+                            _vm._v(" "),
+                            _c("tbody", [
+                              _c("tr", [
+                                _c("td", [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "advertisementApprove",
+                                      value: "1"
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.s_user.userPermission
+                                          .advertisementApprove == 1
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "advertisementDelete",
+                                      value: "1"
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.s_user.userPermission
+                                          .advertisementDelete == 1
+                                    }
+                                  })
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("button", [_vm._v("save")])
+                  ])
+                ]
               )
             ]),
             _vm._v(" "),
-            _vm._m(2)
+            _vm._m(4)
           ])
         ])
       ]
@@ -38338,134 +38476,44 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("table", { staticClass: "table" }, [
-      _c("thead", { staticClass: "thead-dark" }, [
-        _c("tr", [
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
-          _vm._v(" "),
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("User")]),
-          _vm._v(" "),
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("Advertisement")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tbody", [
-        _c("tr", [
-          _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
-          _vm._v(" "),
-          _c("td", [
-            _c("table", { staticClass: "table mt-0" }, [
-              _c("thead", { staticClass: "thead-dark" }, [
-                _c("tr", [
-                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Update")]),
-                  _vm._v(" "),
-                  _c("th", { attrs: { scope: "col" } }, [
-                    _vm._v("Permission Set ")
-                  ]),
-                  _vm._v(" "),
-                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")]),
-                  _vm._v(" "),
-                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Make Admin")]),
-                  _vm._v(" "),
-                  _c("th", { attrs: { scope: "col" } }, [_vm._v("User Block")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tbody", [
-                _c("tr", [
-                  _c("td", [
-                    _c("input", {
-                      attrs: {
-                        type: "checkbox",
-                        name: "userUpdate",
-                        value: "1"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("input", {
-                      attrs: {
-                        type: "checkbox",
-                        name: "userSetPermission",
-                        value: "1"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("input", {
-                      attrs: {
-                        type: "checkbox",
-                        name: "userDelete",
-                        value: "1"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("input", {
-                      attrs: {
-                        type: "checkbox",
-                        name: "userMakeAdmin",
-                        value: "1"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("input", {
-                      attrs: {
-                        type: "checkbox",
-                        name: "userSetBlock",
-                        value: "1"
-                      }
-                    })
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("table", { staticClass: "table mt-0" }, [
-              _c("thead", { staticClass: "thead-dark" }, [
-                _c("tr", [
-                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Approve")]),
-                  _vm._v(" "),
-                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tbody", [
-                _c("tr", [
-                  _c("td", [
-                    _c("input", {
-                      attrs: {
-                        type: "checkbox",
-                        name: "advertisementApprove",
-                        value: "1"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("input", {
-                      attrs: {
-                        type: "checkbox",
-                        name: "advertisementDelete",
-                        value: "1"
-                      }
-                    })
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("button", [_vm._v("save")])
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("User")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Advertisement")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Update")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Permission Set ")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Make Admin")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("User Block")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Approve")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")])
+      ])
     ])
   },
   function() {
@@ -38596,7 +38644,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("user_permission_promt", {
-                        attrs: { user_id: _vm.s_user.user.id }
+                        attrs: { s_user: _vm.s_user }
                       })
                     ],
                     1
