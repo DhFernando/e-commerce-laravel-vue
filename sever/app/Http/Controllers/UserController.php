@@ -35,7 +35,12 @@ class UserController extends Controller
 
     private function permissionValidation(){
         return tap(request()->validate([
-            // no need to validate any thing
+           'userUpdate'=>'',
+           'userSetPermission'=>'',
+           'userDelete'=>'',
+           'userMakeAdmin'=>'',
+           'advertisementApprove'=>'',
+           'advertisementDelete'=>'',
         ]),function (){
             if(request()->hasFile('image')){
                 request()->validate([
@@ -152,13 +157,24 @@ class UserController extends Controller
 
     public function setPermission($user){
         $permission = request();
-        Permission::create(array_merge(
-           $this->permissionValidation(),
-            [
-                'userId'=>Auth::user()->id,
-                'setupUserId'=>Auth::user()->id ,
-                'userSetBlock'=>Auth::user()->id ,
-            ])
+        Permission::create(
+            array_merge(
+                    [
+                'userUpdate'=>'0',
+                'userSetPermission'=>'0',
+                'userDelete'=>'0',
+                'userMakeAdmin'=>'0',
+                'advertisementApprove'=>'0',
+                'advertisementDelete'=>'0   ',
+            ],array_merge(
+                    $this->permissionValidation(),
+                    [
+                        'userId'=>Auth::user()->id,
+                        'setupUserId'=>Auth::user()->id ,
+                        'userSetBlock'=>Auth::user()->id ,
+                    ]
+                )
+            )
         );
 
         return redirect("/user/");
