@@ -10,7 +10,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form :action="'/user/' + user_id +'/setPermission'" method="get" enctype="multipart/form-data">
+                        <form :action="'/user/' + user_id +'/permissionUpdate'" method="get" enctype="multipart/form-data">
                             <table class="table">
                                 <thead class="thead-dark">
                                 <tr>

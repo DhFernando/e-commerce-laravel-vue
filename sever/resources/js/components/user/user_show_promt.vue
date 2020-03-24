@@ -50,12 +50,13 @@
                        <div class="col-12 border-top mt-3 pt-3 ">
 
                            <div class="d-flex flex-wrap">
+                                <!-- user permissions -->
                                <div class="badge badge-pill badge-primary">userUpdate : {{ s_user.userPermission['userUpdate'] }}</div>
                                <div class="badge badge-pill badge-primary">userSetPermission : {{ s_user.userPermission['userSetPermission'] }}</div>
                                <div class="badge badge-pill badge-primary">userDelete : {{ s_user.userPermission['userDelete'] }}</div>
                                <div class="badge badge-pill badge-primary">userMakeAdmin : {{ s_user.userPermission['userMakeAdmin'] }}</div>
                                <div class="badge badge-pill badge-primary">userSetBlock : {{ s_user.userPermission['userSetBlock'] }}</div>
-
+                            <!--  advertisement  -->
                                <div class="badge badge-pill badge-primary">advertisementApprove : {{ s_user.userPermission['advertisementApprove'] }}</div>
                                <div class="badge badge-pill badge-primary">advertisementDelete : {{ s_user.userPermission['advertisementDelete'] }}</div>
                            </div>

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Permission;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -53,6 +55,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+
     }
 
     /**
@@ -63,10 +66,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        Permission::create([
+            'userUpdate'=>'0',
+            'userSetPermission'=>'0',
+            'userDelete'=>'0',
+            'userMakeAdmin'=>'0',
+            'userSetBlock'=>'0',
+            'advertisementApprove'=>'0',
+            'advertisementDelete'=>'0',
+            'user_id'=>$user['id'],
+            'setupUserId'=>'0'
+        ]);
+
+        return $user;
+
+
     }
 }

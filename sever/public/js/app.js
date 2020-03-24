@@ -2349,6 +2349,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['s_user'],
   data: function data() {
@@ -38291,7 +38292,7 @@ var render = function() {
                 "form",
                 {
                   attrs: {
-                    action: "/user/" + _vm.user_id + "/setPermission",
+                    action: "/user/" + _vm.user_id + "/permissionUpdate",
                     method: "get",
                     enctype: "multipart/form-data"
                   }

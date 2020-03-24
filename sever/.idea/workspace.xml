@@ -274,7 +274,10 @@
       <workItem from="1585047654165" duration="1792000" />
       <workItem from="1585049467616" duration="1415000" />
       <workItem from="1585051357460" duration="1789000" />
-      <workItem from="1585053211561" duration="515000" />
+      <workItem from="1585053211561" duration="1787000" />
+      <workItem from="1585055041446" duration="1792000" />
+      <workItem from="1585056860395" duration="1784000" />
+      <workItem from="1585058674204" duration="1417000" />
     </task>
     <servers />
   </component>
@@ -285,6 +288,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="21" key="#Notifications" timestamp="1585059069148">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="21" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1585059069148" />
     <state x="452" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581258648939">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -317,10 +324,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="73" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579240281220" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585053210601">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1585058675447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585053210601" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585058675447" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578406570052">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

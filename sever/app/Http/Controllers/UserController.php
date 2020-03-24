@@ -180,4 +180,16 @@ class UserController extends Controller
 
         return redirect("/user/");
     }
+
+    public function permissionUpdate(User $user){
+        $user->permission()->first()->update(
+            array_merge(
+                $this->permissionValidation(),
+                [ 'setupUserId'=>Auth::user()->id ]
+            )
+        );
+
+        return redirect("/user/");
+
+    }
 }
