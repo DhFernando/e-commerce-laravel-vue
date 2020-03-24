@@ -2130,7 +2130,8 @@ __webpack_require__.r(__webpack_exports__);
       users: null,
       s_user: {
         user: null,
-        userAd: null
+        userAd: null,
+        userPermission: null
       }
     };
   },
@@ -2141,6 +2142,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/user/" + id + "/s_user", {}).then(function (response) {
         _this2.s_user.user = response.data.user;
         _this2.s_user.userAd = response.data.userAd;
+        _this2.s_user.userPermission = response.data.userPermission;
       });
     }
   }
@@ -2245,8 +2247,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: [''],
+  props: ['user_id'],
   data: function data() {
     return {};
   }
@@ -2263,6 +2269,22 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -38247,221 +38269,222 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "row" }, [
+    _c(
+      "div",
+      {
+        staticClass: "modal fade bd-example-modal-lg",
+        attrs: {
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "myLargeModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c("div", { staticClass: "modal-dialog modal-lg" }, [
+          _c("div", { staticClass: "modal-content" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c(
+                "form",
+                {
+                  attrs: {
+                    action: "/user/" + _vm.user_id + "/setPermission",
+                    method: "get",
+                    enctype: "multipart/form-data"
+                  }
+                },
+                [_vm._m(1)]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
+          ])
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "modal-header" }, [
       _c(
-        "div",
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "exampleModalLabel" } },
+        [_vm._v("Permission SerUp")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
         {
-          staticClass: "modal fade bd-example-modal-lg",
+          staticClass: "close",
           attrs: {
-            tabindex: "-1",
-            role: "dialog",
-            "aria-labelledby": "myLargeModalLabel",
-            "aria-hidden": "true"
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
           }
         },
-        [
-          _c("div", { staticClass: "modal-dialog modal-lg" }, [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-header" }, [
-                _c(
-                  "h5",
-                  {
-                    staticClass: "modal-title",
-                    attrs: { id: "exampleModalLabel" }
-                  },
-                  [_vm._v("Permission SerUp")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "close",
-                    attrs: {
-                      type: "button",
-                      "data-dismiss": "modal",
-                      "aria-label": "Close"
-                    }
-                  },
-                  [
-                    _c("span", { attrs: { "aria-hidden": "true" } }, [
-                      _vm._v("×")
-                    ])
-                  ]
-                )
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("table", { staticClass: "table" }, [
+      _c("thead", { staticClass: "thead-dark" }, [
+        _c("tr", [
+          _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+          _vm._v(" "),
+          _c("th", { attrs: { scope: "col" } }, [_vm._v("User")]),
+          _vm._v(" "),
+          _c("th", { attrs: { scope: "col" } }, [_vm._v("Advertisement")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tbody", [
+        _c("tr", [
+          _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("table", { staticClass: "table mt-0" }, [
+              _c("thead", { staticClass: "thead-dark" }, [
+                _c("tr", [
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Update")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [
+                    _vm._v("Permission Set ")
+                  ]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Make Admin")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("User Block")])
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _c(
-                  "form",
-                  {
-                    attrs: {
-                      action: "/user/4/setPermission",
-                      method: "get",
-                      enctype: "multipart/form-data"
-                    }
-                  },
-                  [
-                    _c("table", { staticClass: "table" }, [
-                      _c("thead", { staticClass: "thead-dark" }, [
-                        _c("tr", [
-                          _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
-                          _vm._v(" "),
-                          _c("th", { attrs: { scope: "col" } }, [
-                            _vm._v("Advertisement")
-                          ]),
-                          _vm._v(" "),
-                          _c("th", { attrs: { scope: "col" } }, [
-                            _vm._v("User")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("tbody", [
-                        _c("tr", [
-                          _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c("table", { staticClass: "table mt-0" }, [
-                              _c("thead", { staticClass: "thead-dark" }, [
-                                _c("tr", [
-                                  _c("th", { attrs: { scope: "col" } }, [
-                                    _vm._v("Update")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", { attrs: { scope: "col" } }, [
-                                    _vm._v("Permission Set ")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", { attrs: { scope: "col" } }, [
-                                    _vm._v("Delete")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", { attrs: { scope: "col" } }, [
-                                    _vm._v("Make Admin")
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("tbody", [
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "checkbox",
-                                        name: "userUpdate",
-                                        value: "1"
-                                      }
-                                    })
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "checkbox",
-                                        name: "userSetPermission",
-                                        value: "1"
-                                      }
-                                    })
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "checkbox",
-                                        name: "userDelete",
-                                        value: "1"
-                                      }
-                                    })
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "checkbox",
-                                        name: "userMakeAdmin",
-                                        value: "1"
-                                      }
-                                    })
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c("table", { staticClass: "table mt-0" }, [
-                              _c("thead", { staticClass: "thead-dark" }, [
-                                _c("tr", [
-                                  _c("th", { attrs: { scope: "col" } }, [
-                                    _vm._v("Approve")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", { attrs: { scope: "col" } }, [
-                                    _vm._v("Delete")
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("tbody", [
-                                _c("tr", [
-                                  _c("td", [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "checkbox",
-                                        name: "advertisementApprove",
-                                        value: "1"
-                                      }
-                                    })
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("td", [
-                                    _c("input", {
-                                      attrs: {
-                                        type: "checkbox",
-                                        name: "advertisementDelete",
-                                        value: "1"
-                                      }
-                                    })
-                                  ])
-                                ])
-                              ])
-                            ])
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("button", [_vm._v("save")])
-                    ])
-                  ]
-                )
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [
+                    _c("input", {
+                      attrs: {
+                        type: "checkbox",
+                        name: "userUpdate",
+                        value: "1"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      attrs: {
+                        type: "checkbox",
+                        name: "userSetPermission",
+                        value: "1"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      attrs: {
+                        type: "checkbox",
+                        name: "userDelete",
+                        value: "1"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      attrs: {
+                        type: "checkbox",
+                        name: "userMakeAdmin",
+                        value: "1"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      attrs: {
+                        type: "checkbox",
+                        name: "userSetBlock",
+                        value: "1"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("table", { staticClass: "table mt-0" }, [
+              _c("thead", { staticClass: "thead-dark" }, [
+                _c("tr", [
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Approve")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")])
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "modal-footer" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { type: "button", "data-dismiss": "modal" }
-                  },
-                  [_vm._v("Close")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "btn btn-primary", attrs: { type: "button" } },
-                  [_vm._v("Save changes")]
-                )
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [
+                    _c("input", {
+                      attrs: {
+                        type: "checkbox",
+                        name: "advertisementApprove",
+                        value: "1"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      attrs: {
+                        type: "checkbox",
+                        name: "advertisementDelete",
+                        value: "1"
+                      }
+                    })
+                  ])
+                ])
               ])
             ])
           ])
-        ]
+        ])
+      ]),
+      _vm._v(" "),
+      _c("button", [_vm._v("save")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-secondary",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_vm._v("Close")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        [_vm._v("Save changes")]
       )
     ])
   }
@@ -38571,12 +38594,105 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("user_permission_promt")
+                      _c("user_permission_promt", {
+                        attrs: { user_id: _vm.s_user.user.id }
+                      })
                     ],
                     1
                   ),
                   _vm._v(" "),
                   _vm._m(1)
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-12 border-top mt-3 pt-3 " }, [
+                    _c("div", { staticClass: "d-flex flex-wrap" }, [
+                      _c(
+                        "div",
+                        { staticClass: "badge badge-pill badge-primary" },
+                        [
+                          _vm._v(
+                            "userUpdate : " +
+                              _vm._s(_vm.s_user.userPermission["userUpdate"])
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "badge badge-pill badge-primary" },
+                        [
+                          _vm._v(
+                            "userSetPermission : " +
+                              _vm._s(
+                                _vm.s_user.userPermission["userSetPermission"]
+                              )
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "badge badge-pill badge-primary" },
+                        [
+                          _vm._v(
+                            "userDelete : " +
+                              _vm._s(_vm.s_user.userPermission["userDelete"])
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "badge badge-pill badge-primary" },
+                        [
+                          _vm._v(
+                            "userMakeAdmin : " +
+                              _vm._s(_vm.s_user.userPermission["userMakeAdmin"])
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "badge badge-pill badge-primary" },
+                        [
+                          _vm._v(
+                            "userSetBlock : " +
+                              _vm._s(_vm.s_user.userPermission["userSetBlock"])
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "badge badge-pill badge-primary" },
+                        [
+                          _vm._v(
+                            "advertisementApprove : " +
+                              _vm._s(
+                                _vm.s_user.userPermission[
+                                  "advertisementApprove"
+                                ]
+                              )
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "badge badge-pill badge-primary" },
+                        [
+                          _vm._v(
+                            "advertisementDelete : " +
+                              _vm._s(
+                                _vm.s_user.userPermission["advertisementDelete"]
+                              )
+                          )
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ]),
               _vm._v(" "),

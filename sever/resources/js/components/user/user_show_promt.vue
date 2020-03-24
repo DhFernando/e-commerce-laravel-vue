@@ -38,7 +38,7 @@
                                </table>
 
                         <!--     -->
-                               <user_permission_promt></user_permission_promt>
+                               <user_permission_promt v-bind:user_id="s_user.user.id"></user_permission_promt>
                         <!--     -->
 
                            </div>
@@ -46,6 +46,22 @@
                                <div class="bg-danger " style="height: 150px;" ></div>
                            </div>
                        </div>
+                    <div class="row">
+                       <div class="col-12 border-top mt-3 pt-3 ">
+
+                           <div class="d-flex flex-wrap">
+                               <div class="badge badge-pill badge-primary">userUpdate : {{ s_user.userPermission['userUpdate'] }}</div>
+                               <div class="badge badge-pill badge-primary">userSetPermission : {{ s_user.userPermission['userSetPermission'] }}</div>
+                               <div class="badge badge-pill badge-primary">userDelete : {{ s_user.userPermission['userDelete'] }}</div>
+                               <div class="badge badge-pill badge-primary">userMakeAdmin : {{ s_user.userPermission['userMakeAdmin'] }}</div>
+                               <div class="badge badge-pill badge-primary">userSetBlock : {{ s_user.userPermission['userSetBlock'] }}</div>
+
+                               <div class="badge badge-pill badge-primary">advertisementApprove : {{ s_user.userPermission['advertisementApprove'] }}</div>
+                               <div class="badge badge-pill badge-primary">advertisementDelete : {{ s_user.userPermission['advertisementDelete'] }}</div>
+                           </div>
+
+                       </div>
+                    </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">

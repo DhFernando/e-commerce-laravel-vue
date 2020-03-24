@@ -44,7 +44,8 @@
                 users: null,
                 s_user: {
                     user:null,
-                    userAd: null
+                    userAd: null,
+                    userPermission:null
                 }
             }
         },
@@ -53,6 +54,8 @@
                 axios.get("/user/"+id+"/s_user",{}).then(response=>{
                     this.s_user.user =  response.data.user
                     this.s_user.userAd = response.data.userAd
+                    this.s_user.userPermission = response.data.userPermission
+
                 })
             }
         }

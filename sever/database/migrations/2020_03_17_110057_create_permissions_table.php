@@ -15,7 +15,7 @@ class CreatePermissionsTable extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('userId');
+            $table->string('user_id');
             $table->string('advertisementApprove');
             $table->string('advertisementDelete');
             $table->string('userUpdate');

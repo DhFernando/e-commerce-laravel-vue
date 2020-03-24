@@ -10,13 +10,13 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="/user/4/setPermission" method="get" enctype="multipart/form-data">
+                        <form :action="'/user/' + user_id +'/setPermission'" method="get" enctype="multipart/form-data">
                             <table class="table">
                                 <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Advertisement</th>
                                     <th scope="col">User</th>
+                                    <th scope="col">Advertisement</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -30,6 +30,7 @@
                                                 <th scope="col">Permission Set </th>
                                                 <th scope="col">Delete</th>
                                                 <th scope="col">Make Admin</th>
+                                                <th scope="col">User Block</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -45,6 +46,9 @@
                                                 </td>
                                                 <td>
                                                     <input type="checkbox" name="userMakeAdmin" value="1">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="userSetBlock" value="1">
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -88,7 +92,7 @@
 
 <script>
     export default {
-        props:[''],
+        props:['user_id'],
         data:function(){
             return{
 

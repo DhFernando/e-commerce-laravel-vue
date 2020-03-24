@@ -39,6 +39,7 @@ class UserController extends Controller
            'userSetPermission'=>'',
            'userDelete'=>'',
            'userMakeAdmin'=>'',
+           'userSetBlock'=>'',
            'advertisementApprove'=>'',
            'advertisementDelete'=>'',
         ]),function (){
@@ -148,15 +149,15 @@ class UserController extends Controller
     }
 
     public function s_user(User $user){
-
         return [
                 'user'=>$user,
-                'userAd'=>$user->advertisements()->get()
+                'userAd'=>$user->advertisements()->get(),
+                'userPermission'=>$user->permission()->first()
         ];
     }
 
-    public function setPermission($user){
-        $permission = request();
+    public function setPermission($user_id){
+//        dd($user_id);
         Permission::create(
             array_merge(
                     [
@@ -164,14 +165,14 @@ class UserController extends Controller
                 'userSetPermission'=>'0',
                 'userDelete'=>'0',
                 'userMakeAdmin'=>'0',
+                'userSetBlock'=>'0',
                 'advertisementApprove'=>'0',
-                'advertisementDelete'=>'0   ',
+                'advertisementDelete'=>'0',
             ],array_merge(
                     $this->permissionValidation(),
                     [
-                        'userId'=>Auth::user()->id,
-                        'setupUserId'=>Auth::user()->id ,
-                        'userSetBlock'=>Auth::user()->id ,
+                        'user_id'=>$user_id, // the person who have this permission
+                        'setupUserId'=>Auth::user()->id , // the person who set permission
                     ]
                 )
             )
